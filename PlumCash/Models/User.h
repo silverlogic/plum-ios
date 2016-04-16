@@ -37,4 +37,6 @@ typedef NS_ENUM(NSUInteger, Gender) {
 + (void)setCurrentUser:(User *)currentUser;
 + (UIImage*)getPlaceholderImage;
 
++ (NSDictionary*)fieldMappings;
+
 @end

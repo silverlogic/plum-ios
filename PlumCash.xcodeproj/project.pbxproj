@@ -20,6 +20,8 @@
 		639AB19F1CC2AA2700C02199 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB19E1CC2AA2700C02199 /* UIViewController+Alert.m */; };
 		639AB1A31CC2AD9B00C02199 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1A21CC2AD9B00C02199 /* User.m */; };
 		639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1A51CC2AF2C00C02199 /* NSObject+ProgressHUD.m */; };
+		639AB1AA1CC2BA0000C02199 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1A91CC2BA0000C02199 /* APIClient.m */; };
+		639AB1AD1CC2C1AD00C02199 /* ExtendedError.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1AC1CC2C1AD00C02199 /* ExtendedError.m */; };
 		6BD5C4021CC2BDED004F7E13 /* KidDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C4011CC2BDED004F7E13 /* KidDetailViewController.m */; };
 		6BD5C4051CC2BE23004F7E13 /* AddKidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C4041CC2BE23004F7E13 /* AddKidViewController.m */; };
 		6BD5C40B1CC2BED8004F7E13 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C40A1CC2BED8004F7E13 /* SettingsTableViewController.m */; };
@@ -69,6 +71,10 @@
 		639AB1A21CC2AD9B00C02199 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
 		639AB1A41CC2AF2C00C02199 /* NSObject+ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ProgressHUD.h"; path = "Categories/NSObject+ProgressHUD.h"; sourceTree = "<group>"; };
 		639AB1A51CC2AF2C00C02199 /* NSObject+ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ProgressHUD.m"; path = "Categories/NSObject+ProgressHUD.m"; sourceTree = "<group>"; };
+		639AB1A81CC2BA0000C02199 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = Singletons/APIClient.h; sourceTree = "<group>"; };
+		639AB1A91CC2BA0000C02199 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = Singletons/APIClient.m; sourceTree = "<group>"; };
+		639AB1AB1CC2C1AD00C02199 /* ExtendedError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtendedError.h; path = Models/ExtendedError.h; sourceTree = "<group>"; };
+		639AB1AC1CC2C1AD00C02199 /* ExtendedError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExtendedError.m; path = Models/ExtendedError.m; sourceTree = "<group>"; };
 		6BD5C4001CC2BDED004F7E13 /* KidDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KidDetailViewController.h; path = ViewControllers/KidDetailViewController.h; sourceTree = "<group>"; };
 		6BD5C4011CC2BDED004F7E13 /* KidDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KidDetailViewController.m; path = ViewControllers/KidDetailViewController.m; sourceTree = "<group>"; };
 		6BD5C4031CC2BE23004F7E13 /* AddKidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddKidViewController.h; path = ViewControllers/AddKidViewController.h; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 				639AB19B1CC2A59100C02199 /* ViewControllers */,
 				6BD5C40F1CC2C0D9004F7E13 /* Cells */,
 				639AB1A01CC2AD8300C02199 /* Models */,
+				639AB1A71CC2B9CD00C02199 /* Singletons */,
 				639AB19C1CC2A9CB00C02199 /* Categories */,
 				639AB1621CC2990700C02199 /* Supporting Files */,
 			);
@@ -211,8 +218,19 @@
 			children = (
 				639AB1A11CC2AD9B00C02199 /* User.h */,
 				639AB1A21CC2AD9B00C02199 /* User.m */,
+				639AB1AB1CC2C1AD00C02199 /* ExtendedError.h */,
+				639AB1AC1CC2C1AD00C02199 /* ExtendedError.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		639AB1A71CC2B9CD00C02199 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1A81CC2BA0000C02199 /* APIClient.h */,
+				639AB1A91CC2BA0000C02199 /* APIClient.m */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 		6B7653F5E0E60D51EA332F7E /* Pods */ = {
@@ -447,8 +465,10 @@
 				639AB1A31CC2AD9B00C02199 /* User.m in Sources */,
 				6BD5C40B1CC2BED8004F7E13 /* SettingsTableViewController.m in Sources */,
 				6BD5C40E1CC2BF04004F7E13 /* KidsTableViewController.m in Sources */,
+				639AB1AD1CC2C1AD00C02199 /* ExtendedError.m in Sources */,
 				6BD5C4021CC2BDED004F7E13 /* KidDetailViewController.m in Sources */,
 				639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */,
+				639AB1AA1CC2BA0000C02199 /* APIClient.m in Sources */,
 				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
 				639AB19F1CC2AA2700C02199 /* UIViewController+Alert.m in Sources */,
 				639AB1641CC2990700C02199 /* main.m in Sources */,

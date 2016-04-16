@@ -10,6 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "UIViewController+Alert.h"
+#import "User.h"
 
 @interface InitialViewController ()
 
@@ -28,16 +29,10 @@
         [self showMessage:NSLocalizedString(@"Login.FacebookCanceled", @"user has to compete FB auth flow") withType:MessageTypeError];
         return;
     }
-//    
-//    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"/me/" parameters:@{@"fields": @"id,first_name,last_name,email,gender,birthday",} HTTPMethod:@"GET"];
-//    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-//        [self fetchData:result intoUser:[User currentUser]];
-//        // attempt login
-//        DDLogDebug(@"attempt login");
-//        [self loginWithUsername:[User currentUser].username password:[User currentUser].password success:^{
-//            // -- success: all good
-//            DDLogDebug(@"login successful; user: %@", [User currentUser]);
-//            [self handleLogin];
+    
+//    @TODO: send result.token to API
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
