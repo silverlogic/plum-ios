@@ -7,6 +7,8 @@
 //
 
 #import "KidsTableViewController.h"
+#import "KidTableViewCell.h"
+#import "Kid.h"
 
 @interface KidsTableViewController ()
 
@@ -22,6 +24,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.list = [NSMutableArray array];
+	[self.list addObjectsFromArray:[Kid mockKids]];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,23 +38,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.list.count;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 100;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+	KidTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KidTableViewCell" forIndexPath:indexPath];
+	cell.kid = self.list[indexPath.row];
+	// alternate background colors E6E7E7 / WHIT
+	cell.backgroundColor = (indexPath.row % 2 == 1) ?  [UIColor whiteColor] : [UIColor colorWithRed:230/255.0 green:231/255.0 blue:231/255.0 alpha:1];
+	
     return cell;
 }
-*/
+
+- (void)setList:(NSMutableArray *)list {
+	_list = list;
+	
+	[self.tableView reloadData];
+}
 
 /*
 // Override to support conditional editing of the table view.

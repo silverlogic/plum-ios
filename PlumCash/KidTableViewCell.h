@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Kid.h"
 
 @interface KidTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) Kid *kid;
 
 @end
