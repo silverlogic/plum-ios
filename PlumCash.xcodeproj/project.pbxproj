@@ -24,6 +24,7 @@
 		6BD5C4051CC2BE23004F7E13 /* AddKidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C4041CC2BE23004F7E13 /* AddKidViewController.m */; };
 		6BD5C40B1CC2BED8004F7E13 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C40A1CC2BED8004F7E13 /* SettingsTableViewController.m */; };
 		6BD5C40E1CC2BF04004F7E13 /* KidsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C40D1CC2BF04004F7E13 /* KidsTableViewController.m */; };
+		6BD5C4121CC2C102004F7E13 /* KidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C4111CC2C102004F7E13 /* KidTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		6BD5C40A1CC2BED8004F7E13 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsTableViewController.m; path = ViewControllers/SettingsTableViewController.m; sourceTree = "<group>"; };
 		6BD5C40C1CC2BF04004F7E13 /* KidsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KidsTableViewController.h; path = ViewControllers/KidsTableViewController.h; sourceTree = "<group>"; };
 		6BD5C40D1CC2BF04004F7E13 /* KidsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KidsTableViewController.m; path = ViewControllers/KidsTableViewController.m; sourceTree = "<group>"; };
+		6BD5C4101CC2C102004F7E13 /* KidTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidTableViewCell.h; sourceTree = "<group>"; };
+		6BD5C4111CC2C102004F7E13 /* KidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidTableViewCell.m; sourceTree = "<group>"; };
 		955D06BF179F8ABA3640311A /* Pods-PlumCashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumCashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.release.xcconfig"; sourceTree = "<group>"; };
 		B2CEB641478726B537675951 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DE7713FA700E6625ED90745D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 				639AB1731CC2990700C02199 /* LaunchScreen.storyboard */,
 				639AB1761CC2990700C02199 /* Info.plist */,
 				639AB19B1CC2A59100C02199 /* ViewControllers */,
+				6BD5C40F1CC2C0D9004F7E13 /* Cells */,
 				639AB1A01CC2AD8300C02199 /* Models */,
 				639AB19C1CC2A9CB00C02199 /* Categories */,
 				639AB1621CC2990700C02199 /* Supporting Files */,
@@ -220,6 +224,15 @@
 				955D06BF179F8ABA3640311A /* Pods-PlumCashTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6BD5C40F1CC2C0D9004F7E13 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6BD5C4101CC2C102004F7E13 /* KidTableViewCell.h */,
+				6BD5C4111CC2C102004F7E13 /* KidTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		7AFB9F487D008BBD23B65CD2 /* Frameworks */ = {
@@ -430,6 +443,7 @@
 			files = (
 				639AB19A1CC2A58C00C02199 /* InitialViewController.m in Sources */,
 				6BD5C4051CC2BE23004F7E13 /* AddKidViewController.m in Sources */,
+				6BD5C4121CC2C102004F7E13 /* KidTableViewCell.m in Sources */,
 				639AB1A31CC2AD9B00C02199 /* User.m in Sources */,
 				6BD5C40B1CC2BED8004F7E13 /* SettingsTableViewController.m in Sources */,
 				6BD5C40E1CC2BF04004F7E13 /* KidsTableViewController.m in Sources */,
