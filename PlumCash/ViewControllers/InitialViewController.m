@@ -13,7 +13,7 @@
 
 @interface InitialViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet FBSDKButton *facebookButton;
 
 
 @end
