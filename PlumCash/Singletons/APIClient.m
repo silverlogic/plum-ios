@@ -18,7 +18,7 @@
 // Shared Instance
 static APIClient  *_sharedClient = nil;
 static void (^_defaultFailureBlock)(RKObjectRequestOperation *operation, NSError *error) = nil;
-static NSString *const apiUrl = @"https://6fe345e1.ngrok.io/v1/";
+static NSString *const apiUrl = @"http://6fe345e1.ngrok.io/v1/";
 
 // Default Headers
 static NSString *const kAuthorization = @"Authorization";
@@ -30,14 +30,15 @@ static NSString *const kPage		= @"page";
 
 
 // Endpoints
-static NSString *const kFacebookEndpoint = @"login/facebook/";
-static NSString *const kSignupEndpoint = @"register/";
-static NSString *const kLoginEndpoint = @"login/";
-static NSString *const kForgotPasswordEndpoint = @"forgot-password/";
-static NSString *const kChangePasswordEndpoint = @"users/change-password/";
-static NSString *const kUserEndpoint = @"users/:userId/";
-static NSString *const kKidsEndpoint = @"kids/";
-static NSString *const kKidEndpoint = @"kid/:kidId/";
+static NSString *const kFacebookEndpoint = @"login/facebook";
+static NSString *const kSignupEndpoint = @"register";
+static NSString *const kLoginEndpoint = @"login";
+static NSString *const kForgotPasswordEndpoint = @"forgot-password";
+static NSString *const kChangePasswordEndpoint = @"users/change-password";
+static NSString *const kUserEndpoint = @"users/:userId";
+static NSString *const kMeEndpoint = @"users/me";
+static NSString *const kKidsEndpoint = @"kids";
+static NSString *const kKidEndpoint = @"kid/:kidId";
 
 typedef NS_ENUM(NSUInteger, PageSize) {
     PageSizeDefault  = 20,
@@ -125,6 +126,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKResponseDescriptor *changePasswordResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:emptyResponseMapping method:RKRequestMethodPOST pathPattern:kChangePasswordEndpoint keyPath:nil statusCodes:successStatusCodes];
     /* USER */
     RKResponseDescriptor *userResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userResponseMapping method:RKRequestMethodPATCH pathPattern:kUserEndpoint keyPath:nil statusCodes:successStatusCodes];
+    RKResponseDescriptor *meResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userResponseMapping method:RKRequestMethodGET pathPattern:kMeEndpoint keyPath:nil statusCodes:successStatusCodes];
     /* KID */
     RKResponseDescriptor *kidsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidsEndpoint keyPath:kResults statusCodes:successStatusCodes];
     RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
@@ -160,6 +162,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                forgotPasswordResponseDescriptor,
                                                changePasswordResponseDescriptor,
                                                userResponseDescriptor,
+                                               meResponseDescriptor,
                                                kidsResponseDescriptor,
                                                kidResponseDescriptor,
                                                error400Descriptor,
@@ -184,6 +187,45 @@ typedef NS_ENUM(NSUInteger, PageSize) {
 #pragma mark - API Endpoints
 + (void)cancelAllRequests {
     [[RKObjectManager sharedManager].operationQueue cancelAllOperations];
+}
+
++ (void)getMe:(void (^)(User *))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
+    [[RKObjectManager sharedManager] getObject:[User currentUser] path:kMeEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(mappingResult.firstObject);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)facebookLogin:(NSString *)token success:(void (^)(User *))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
+    NSDictionary *params = @{ @"token": token };
+    [[RKObjectManager sharedManager] postObject:nil path:kFacebookEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        User *user = mappingResult.firstObject;
+        [APIClient setToken:user.token];
+        [APIClient getMe:^(User *user) {
+            if (success) {
+                success(mappingResult.firstObject);
+            }
+        } failure:^(NSError *error, NSHTTPURLResponse *response) {
+            if (failure) {
+                failure(error, operation.HTTPRequestOperation.response);
+            } else {
+                _defaultFailureBlock(operation, error);
+            }
+        }];
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
 }
 
 + (void)signUpUser:(User*)user  success:(void (^)(User *user))success failure:(void (^)(NSError *error))failure {
@@ -279,6 +321,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
             _defaultFailureBlock(operation, error);
         }
     }];
+}
+
++ (void)getKidsSuccess:(void (^)(NSArray<User *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
+    // @TODO: fill in
 }
 
 

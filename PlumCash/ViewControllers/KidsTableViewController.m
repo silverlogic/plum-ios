@@ -9,6 +9,13 @@
 #import "KidsTableViewController.h"
 #import "KidTableViewCell.h"
 #import "Kid.h"
+#import "APIClient.h"
+#import "User.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
+static NSString *const kLogoutSegue = @"LogoutSegue";
+static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 
 @interface KidsTableViewController ()
 
@@ -26,7 +33,21 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.list = [NSMutableArray array];
 	[self.list addObjectsFromArray:[Kid mockKids]];
+    
+    if (![APIClient isAuthenticated]) {
+        [self logout:NO];
+        NSLog(@"missing authentication --> logout");
+    }
+}
 
+- (void)logout:(BOOL)animated {
+    [APIClient cancelAllRequests];
+    [APIClient setToken:nil];
+    [User setCurrentUser:nil];
+    FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+    [loginManager logOut];
+    [self performSegueWithIdentifier:animated ? kLogoutSegue : kLogoutSegueNoAnimation sender:self];
+    self.tabBarController.selectedIndex = 0;
 }
 
 - (void)didReceiveMemoryWarning {

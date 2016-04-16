@@ -11,15 +11,23 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "UIViewController+Alert.h"
 #import "User.h"
+#import "APIClient.h"
 
-@interface InitialViewController ()
+@interface InitialViewController () <FBSDKLoginButtonDelegate>
 
-@property (weak, nonatomic) IBOutlet FBSDKButton *facebookButton;
+@property (weak, nonatomic) IBOutlet FBSDKLoginButton *facebookButton;
 
 
 @end
 
 @implementation InitialViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.facebookButton.delegate = self;
+    self.facebookButton.readPermissions = @[@"public_profile", @"email"];
+}
 
 #pragma mark - FB SDK Login Button Delegate
 - (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error {
@@ -30,9 +38,16 @@
         return;
     }
     
-//    @TODO: send result.token to API
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [APIClient facebookLogin:result.token.tokenString success:^(User *user) {
+        //
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(NSError *error, NSHTTPURLResponse *response) {
+        //
+    }];
+}
+
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    // do nothing
 }
 
 @end

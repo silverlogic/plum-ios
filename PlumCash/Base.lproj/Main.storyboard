@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -38,20 +38,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-Dv-Gxb" customClass="FBSDKButton">
-                                <rect key="frame" x="264" y="172" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-Dv-Gxb" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="75" y="285" width="451" height="30"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.31764705879999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oi1-Dv-Gxb" firstAttribute="centerX" secondItem="hxn-v6-DJ1" secondAttribute="centerX" id="a81-pG-171"/>
+                            <constraint firstItem="oi1-Dv-Gxb" firstAttribute="centerY" secondItem="hxn-v6-DJ1" secondAttribute="centerY" id="tGQ-En-0yC"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IEc-FA-9bK"/>
                     <connections>
                         <outlet property="facebookButton" destination="oi1-Dv-Gxb" id="Gwm-gN-EYK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0S-hJ-6CG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2188" y="833"/>
+            <point key="canvasLocation" x="-1286" y="-1922"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qQi-Bg-bVt">
+            <objects>
+                <navigationController id="XCX-wt-JGP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O8h-Ox-vIY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gVk-aK-J1I" kind="relationship" relationship="rootViewController" id="vpj-5R-rCt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9H-lE-ydk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1990" y="-1922"/>
         </scene>
         <!--Kids Table View Controller-->
         <scene sceneID="83p-Zv-y70">
@@ -157,6 +178,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="XCX-wt-JGP" kind="presentation" identifier="LogoutSegueNoAnimation" animates="NO" modalTransitionStyle="flipHorizontal" id="ynT-9a-zIQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETj-UH-xsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -371,7 +395,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cHa-ZZ-72d" id="8vD-GT-h2P">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -383,7 +407,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="VGH-fK-3JG"/>
                     <connections>
-                        <segue destination="lJP-fR-05f" kind="showDetail" id="4UP-ba-hdk"/>
+                        <segue destination="XCX-wt-JGP" kind="presentation" identifier="LogoutSegueNoAnimation" animates="NO" modalTransitionStyle="flipHorizontal" id="jbm-x0-QVN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFt-TA-WC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -457,4 +481,7 @@
     <resources>
         <image name="visa" width="598" height="598"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jbm-x0-QVN"/>
+    </inferredMetricsTieBreakers>
 </document>
