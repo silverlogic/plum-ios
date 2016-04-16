@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface KidsTableViewController : UITableViewController
+@property (nonatomic, strong) NSMutableArray *list;
 
 @end
