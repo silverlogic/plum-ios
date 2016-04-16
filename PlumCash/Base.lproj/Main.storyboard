@@ -158,7 +158,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="237" y="8"/>
+            <point key="canvasLocation" x="240" y="15"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -203,10 +203,42 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="VGH-fK-3JG"/>
+                    <connections>
+                        <segue destination="lJP-fR-05f" kind="showDetail" id="4UP-ba-hdk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFt-TA-WC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-574" y="-684"/>
+        </scene>
+        <!--My Card View Controller-->
+        <scene sceneID="GWe-Ey-zEJ">
+            <objects>
+                <viewController id="lJP-fR-05f" userLabel="My Card View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0DC-w2-1xr"/>
+                        <viewControllerLayoutGuide type="bottom" id="bEr-3h-MYW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s3A-fz-ZsB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Hx-dy-eoP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="2xd-O1-pC1">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="z8i-Vi-jcr"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="i51-Jr-z8c"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Njg-Fr-djK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="-692"/>
         </scene>
         <!--Settings-->
         <scene sceneID="SR9-Oz-dWa">
