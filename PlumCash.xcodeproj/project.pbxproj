@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
+		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
+		639AB16A1CC2990700C02199 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1691CC2990700C02199 /* FirstViewController.m */; };
+		639AB16D1CC2990700C02199 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB16C1CC2990700C02199 /* SecondViewController.m */; };
+		639AB1701CC2990700C02199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639AB16E1CC2990700C02199 /* Main.storyboard */; };
+		639AB1721CC2990700C02199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639AB1711CC2990700C02199 /* Assets.xcassets */; };
+		639AB1751CC2990700C02199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639AB1731CC2990700C02199 /* LaunchScreen.storyboard */; };
+		639AB1801CC2990700C02199 /* PlumCashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB17F1CC2990700C02199 /* PlumCashTests.m */; };
+		639AB18B1CC2990700C02199 /* PlumCashUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB18A1CC2990700C02199 /* PlumCashUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		639AB17C1CC2990700C02199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639AB1571CC2990700C02199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639AB15E1CC2990700C02199;
+			remoteInfo = PlumCash;
+		};
+		639AB1871CC2990700C02199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639AB1571CC2990700C02199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639AB15E1CC2990700C02199;
+			remoteInfo = PlumCash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB1631CC2990700C02199 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		639AB1651CC2990700C02199 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		639AB1661CC2990700C02199 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		639AB1681CC2990700C02199 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		639AB1691CC2990700C02199 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		639AB16B1CC2990700C02199 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		639AB16C1CC2990700C02199 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		639AB16F1CC2990700C02199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		639AB1711CC2990700C02199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		639AB1741CC2990700C02199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		639AB1761CC2990700C02199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB17B1CC2990700C02199 /* PlumCashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlumCashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB17F1CC2990700C02199 /* PlumCashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlumCashTests.m; sourceTree = "<group>"; };
+		639AB1811CC2990700C02199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB1861CC2990700C02199 /* PlumCashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlumCashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB18A1CC2990700C02199 /* PlumCashUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlumCashUITests.m; sourceTree = "<group>"; };
+		639AB18C1CC2990700C02199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		639AB15C1CC2990700C02199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1781CC2990700C02199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1831CC2990700C02199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		639AB1561CC2990700C02199 = {
+			isa = PBXGroup;
+			children = (
+				639AB1611CC2990700C02199 /* PlumCash */,
+				639AB17E1CC2990700C02199 /* PlumCashTests */,
+				639AB1891CC2990700C02199 /* PlumCashUITests */,
+				639AB1601CC2990700C02199 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		639AB1601CC2990700C02199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				639AB15F1CC2990700C02199 /* PlumCash.app */,
+				639AB17B1CC2990700C02199 /* PlumCashTests.xctest */,
+				639AB1861CC2990700C02199 /* PlumCashUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		639AB1611CC2990700C02199 /* PlumCash */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1651CC2990700C02199 /* AppDelegate.h */,
+				639AB1661CC2990700C02199 /* AppDelegate.m */,
+				639AB1681CC2990700C02199 /* FirstViewController.h */,
+				639AB1691CC2990700C02199 /* FirstViewController.m */,
+				639AB16B1CC2990700C02199 /* SecondViewController.h */,
+				639AB16C1CC2990700C02199 /* SecondViewController.m */,
+				639AB16E1CC2990700C02199 /* Main.storyboard */,
+				639AB1711CC2990700C02199 /* Assets.xcassets */,
+				639AB1731CC2990700C02199 /* LaunchScreen.storyboard */,
+				639AB1761CC2990700C02199 /* Info.plist */,
+				639AB1621CC2990700C02199 /* Supporting Files */,
+			);
+			path = PlumCash;
+			sourceTree = "<group>";
+		};
+		639AB1621CC2990700C02199 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1631CC2990700C02199 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		639AB17E1CC2990700C02199 /* PlumCashTests */ = {
+			isa = PBXGroup;
+			children = (
+				639AB17F1CC2990700C02199 /* PlumCashTests.m */,
+				639AB1811CC2990700C02199 /* Info.plist */,
+			);
+			path = PlumCashTests;
+			sourceTree = "<group>";
+		};
+		639AB1891CC2990700C02199 /* PlumCashUITests */ = {
+			isa = PBXGroup;
+			children = (
+				639AB18A1CC2990700C02199 /* PlumCashUITests.m */,
+				639AB18C1CC2990700C02199 /* Info.plist */,
+			);
+			path = PlumCashUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		639AB15E1CC2990700C02199 /* PlumCash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB18F1CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCash" */;
+			buildPhases = (
+				639AB15B1CC2990700C02199 /* Sources */,
+				639AB15C1CC2990700C02199 /* Frameworks */,
+				639AB15D1CC2990700C02199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlumCash;
+			productName = PlumCash;
+			productReference = 639AB15F1CC2990700C02199 /* PlumCash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		639AB17A1CC2990700C02199 /* PlumCashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB1921CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashTests" */;
+			buildPhases = (
+				639AB1771CC2990700C02199 /* Sources */,
+				639AB1781CC2990700C02199 /* Frameworks */,
+				639AB1791CC2990700C02199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639AB17D1CC2990700C02199 /* PBXTargetDependency */,
+			);
+			name = PlumCashTests;
+			productName = PlumCashTests;
+			productReference = 639AB17B1CC2990700C02199 /* PlumCashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		639AB1851CC2990700C02199 /* PlumCashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB1951CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashUITests" */;
+			buildPhases = (
+				639AB1821CC2990700C02199 /* Sources */,
+				639AB1831CC2990700C02199 /* Frameworks */,
+				639AB1841CC2990700C02199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639AB1881CC2990700C02199 /* PBXTargetDependency */,
+			);
+			name = PlumCashUITests;
+			productName = PlumCashUITests;
+			productReference = 639AB1861CC2990700C02199 /* PlumCashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		639AB1571CC2990700C02199 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = SilverLogic;
+				TargetAttributes = {
+					639AB15E1CC2990700C02199 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					639AB17A1CC2990700C02199 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 639AB15E1CC2990700C02199;
+					};
+					639AB1851CC2990700C02199 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 639AB15E1CC2990700C02199;
+					};
+				};
+			};
+			buildConfigurationList = 639AB15A1CC2990700C02199 /* Build configuration list for PBXProject "PlumCash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 639AB1561CC2990700C02199;
+			productRefGroup = 639AB1601CC2990700C02199 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				639AB15E1CC2990700C02199 /* PlumCash */,
+				639AB17A1CC2990700C02199 /* PlumCashTests */,
+				639AB1851CC2990700C02199 /* PlumCashUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		639AB15D1CC2990700C02199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB1751CC2990700C02199 /* LaunchScreen.storyboard in Resources */,
+				639AB1721CC2990700C02199 /* Assets.xcassets in Resources */,
+				639AB1701CC2990700C02199 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1791CC2990700C02199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1841CC2990700C02199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		639AB15B1CC2990700C02199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB16D1CC2990700C02199 /* SecondViewController.m in Sources */,
+				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
+				639AB16A1CC2990700C02199 /* FirstViewController.m in Sources */,
+				639AB1641CC2990700C02199 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1771CC2990700C02199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB1801CC2990700C02199 /* PlumCashTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1821CC2990700C02199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB18B1CC2990700C02199 /* PlumCashUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		639AB17D1CC2990700C02199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639AB15E1CC2990700C02199 /* PlumCash */;
+			targetProxy = 639AB17C1CC2990700C02199 /* PBXContainerItemProxy */;
+		};
+		639AB1881CC2990700C02199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639AB15E1CC2990700C02199 /* PlumCash */;
+			targetProxy = 639AB1871CC2990700C02199 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		639AB16E1CC2990700C02199 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639AB16F1CC2990700C02199 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		639AB1731CC2990700C02199 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639AB1741CC2990700C02199 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		639AB18D1CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		639AB18E1CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		639AB1901CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlumCash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		639AB1911CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlumCash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		639AB1931CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlumCashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlumCash.app/PlumCash";
+			};
+			name = Debug;
+		};
+		639AB1941CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlumCashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlumCash.app/PlumCash";
+			};
+			name = Release;
+		};
+		639AB1961CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlumCashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlumCash;
+			};
+			name = Debug;
+		};
+		639AB1971CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlumCashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlumCash;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		639AB15A1CC2990700C02199 /* Build configuration list for PBXProject "PlumCash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB18D1CC2990700C02199 /* Debug */,
+				639AB18E1CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639AB18F1CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1901CC2990700C02199 /* Debug */,
+				639AB1911CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		639AB1921CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1931CC2990700C02199 /* Debug */,
+				639AB1941CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		639AB1951CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1961CC2990700C02199 /* Debug */,
+				639AB1971CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 639AB1571CC2990700C02199 /* Project object */;
+}
