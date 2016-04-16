@@ -1,1296 +1,649 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0E8DD29E98E246B50054B090</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-PlumCashTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>22176AFD5F819BA518B0196C</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>2E926A60908AB2D2774FBC9C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>22176AFD5F819BA518B0196C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>45C9A10AEC7768FF7094217A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DEF54916DBC74B350262B68D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB1561CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB1611CC2990700C02199</string>
-				<string>639AB17E1CC2990700C02199</string>
-				<string>639AB1891CC2990700C02199</string>
-				<string>639AB1601CC2990700C02199</string>
-				<string>6B7653F5E0E60D51EA332F7E</string>
-				<string>7AFB9F487D008BBD23B65CD2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1571CC2990700C02199</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>SilverLogic</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>639AB15E1CC2990700C02199</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-					<key>639AB17A1CC2990700C02199</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>639AB15E1CC2990700C02199</string>
-					</dict>
-					<key>639AB1851CC2990700C02199</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>639AB15E1CC2990700C02199</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>639AB15A1CC2990700C02199</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>639AB1561CC2990700C02199</string>
-			<key>productRefGroup</key>
-			<string>639AB1601CC2990700C02199</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>639AB15E1CC2990700C02199</string>
-				<string>639AB17A1CC2990700C02199</string>
-				<string>639AB1851CC2990700C02199</string>
-			</array>
-		</dict>
-		<key>639AB15A1CC2990700C02199</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>639AB18D1CC2990700C02199</string>
-				<string>639AB18E1CC2990700C02199</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>639AB15B1CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>639AB16D1CC2990700C02199</string>
-				<string>639AB1671CC2990700C02199</string>
-				<string>639AB16A1CC2990700C02199</string>
-				<string>639AB1641CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB15C1CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2E926A60908AB2D2774FBC9C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB15D1CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>639AB1751CC2990700C02199</string>
-				<string>639AB1721CC2990700C02199</string>
-				<string>639AB1701CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB15E1CC2990700C02199</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>639AB18F1CC2990700C02199</string>
-			<key>buildPhases</key>
-			<array>
-				<string>A653459C898FE0BA88F13BD2</string>
-				<string>639AB15B1CC2990700C02199</string>
-				<string>639AB15C1CC2990700C02199</string>
-				<string>639AB15D1CC2990700C02199</string>
-				<string>A5389C4D0C873A7585A0C8DD</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>PlumCash</string>
-			<key>productName</key>
-			<string>PlumCash</string>
-			<key>productReference</key>
-			<string>639AB15F1CC2990700C02199</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>639AB15F1CC2990700C02199</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>PlumCash.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>639AB1601CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB15F1CC2990700C02199</string>
-				<string>639AB17B1CC2990700C02199</string>
-				<string>639AB1861CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1611CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB1651CC2990700C02199</string>
-				<string>639AB1661CC2990700C02199</string>
-				<string>639AB1681CC2990700C02199</string>
-				<string>639AB1691CC2990700C02199</string>
-				<string>639AB16B1CC2990700C02199</string>
-				<string>639AB16C1CC2990700C02199</string>
-				<string>639AB16E1CC2990700C02199</string>
-				<string>639AB1711CC2990700C02199</string>
-				<string>639AB1731CC2990700C02199</string>
-				<string>639AB1761CC2990700C02199</string>
-				<string>639AB1621CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>PlumCash</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1621CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB1631CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1631CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1641CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB1631CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB1651CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1661CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1671CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB1661CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB1681CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FirstViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1691CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>FirstViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB16A1CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB1691CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB16B1CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SecondViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB16C1CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SecondViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB16D1CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB16C1CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB16E1CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB16F1CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB16F1CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1701CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB16E1CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB1711CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1721CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB1711CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB1731CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB1741CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1741CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1751CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB1731CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB1761CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1771CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>639AB1801CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB1781CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>45C9A10AEC7768FF7094217A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB1791CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB17A1CC2990700C02199</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>639AB1921CC2990700C02199</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D1B85E5944E48518E0CBFEC6</string>
-				<string>639AB1771CC2990700C02199</string>
-				<string>639AB1781CC2990700C02199</string>
-				<string>639AB1791CC2990700C02199</string>
-				<string>66DEB047367C9D9F126E901B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>639AB17D1CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>PlumCashTests</string>
-			<key>productName</key>
-			<string>PlumCashTests</string>
-			<key>productReference</key>
-			<string>639AB17B1CC2990700C02199</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>639AB17B1CC2990700C02199</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>PlumCashTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>639AB17C1CC2990700C02199</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>639AB1571CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>639AB15E1CC2990700C02199</string>
-			<key>remoteInfo</key>
-			<string>PlumCash</string>
-		</dict>
-		<key>639AB17D1CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>639AB15E1CC2990700C02199</string>
-			<key>targetProxy</key>
-			<string>639AB17C1CC2990700C02199</string>
-		</dict>
-		<key>639AB17E1CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB17F1CC2990700C02199</string>
-				<string>639AB1811CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>PlumCashTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB17F1CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PlumCashTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1801CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB17F1CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB1811CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB1821CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>639AB18B1CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB1831CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB1841CC2990700C02199</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>639AB1851CC2990700C02199</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>639AB1951CC2990700C02199</string>
-			<key>buildPhases</key>
-			<array>
-				<string>639AB1821CC2990700C02199</string>
-				<string>639AB1831CC2990700C02199</string>
-				<string>639AB1841CC2990700C02199</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>639AB1881CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>PlumCashUITests</string>
-			<key>productName</key>
-			<string>PlumCashUITests</string>
-			<key>productReference</key>
-			<string>639AB1861CC2990700C02199</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>639AB1861CC2990700C02199</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>PlumCashUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>639AB1871CC2990700C02199</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>639AB1571CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>639AB15E1CC2990700C02199</string>
-			<key>remoteInfo</key>
-			<string>PlumCash</string>
-		</dict>
-		<key>639AB1881CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>639AB15E1CC2990700C02199</string>
-			<key>targetProxy</key>
-			<string>639AB1871CC2990700C02199</string>
-		</dict>
-		<key>639AB1891CC2990700C02199</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>639AB18A1CC2990700C02199</string>
-				<string>639AB18C1CC2990700C02199</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>PlumCashUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB18A1CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PlumCashUITests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB18B1CC2990700C02199</key>
-		<dict>
-			<key>fileRef</key>
-			<string>639AB18A1CC2990700C02199</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>639AB18C1CC2990700C02199</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>639AB18D1CC2990700C02199</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>639AB18E1CC2990700C02199</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>639AB18F1CC2990700C02199</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>639AB1901CC2990700C02199</string>
-				<string>639AB1911CC2990700C02199</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>639AB1901CC2990700C02199</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DE7713FA700E6625ED90745D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>PlumCash/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.silverlogic.PlumCash</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>639AB1911CC2990700C02199</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B2CEB641478726B537675951</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>PlumCash/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.silverlogic.PlumCash</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>639AB1921CC2990700C02199</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>639AB1931CC2990700C02199</string>
-				<string>639AB1941CC2990700C02199</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>639AB1931CC2990700C02199</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0E8DD29E98E246B50054B090</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>PlumCashTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.silverlogic.PlumCashTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/PlumCash.app/PlumCash</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>639AB1941CC2990700C02199</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>955D06BF179F8ABA3640311A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>PlumCashTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.silverlogic.PlumCashTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/PlumCash.app/PlumCash</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>639AB1951CC2990700C02199</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>639AB1961CC2990700C02199</string>
-				<string>639AB1971CC2990700C02199</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>639AB1961CC2990700C02199</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>PlumCashUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.silverlogic.PlumCashUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>PlumCash</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>639AB1971CC2990700C02199</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>PlumCashUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.silverlogic.PlumCashUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>PlumCash</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>66DEB047367C9D9F126E901B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6B7653F5E0E60D51EA332F7E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DE7713FA700E6625ED90745D</string>
-				<string>B2CEB641478726B537675951</string>
-				<string>0E8DD29E98E246B50054B090</string>
-				<string>955D06BF179F8ABA3640311A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7AFB9F487D008BBD23B65CD2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>22176AFD5F819BA518B0196C</string>
-				<string>DEF54916DBC74B350262B68D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>955D06BF179F8ABA3640311A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-PlumCashTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A5389C4D0C873A7585A0C8DD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A653459C898FE0BA88F13BD2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B2CEB641478726B537675951</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D1B85E5944E48518E0CBFEC6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>DE7713FA700E6625ED90745D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEF54916DBC74B350262B68D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-PlumCashTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>639AB1571CC2990700C02199</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E926A60908AB2D2774FBC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22176AFD5F819BA518B0196C /* libPods.a */; };
+		45C9A10AEC7768FF7094217A /* libPods-PlumCashTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF54916DBC74B350262B68D /* libPods-PlumCashTests.a */; };
+		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
+		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
+		639AB16A1CC2990700C02199 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1691CC2990700C02199 /* FirstViewController.m */; };
+		639AB16D1CC2990700C02199 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB16C1CC2990700C02199 /* SecondViewController.m */; };
+		639AB1701CC2990700C02199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639AB16E1CC2990700C02199 /* Main.storyboard */; };
+		639AB1721CC2990700C02199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639AB1711CC2990700C02199 /* Assets.xcassets */; };
+		639AB1751CC2990700C02199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639AB1731CC2990700C02199 /* LaunchScreen.storyboard */; };
+		639AB1801CC2990700C02199 /* PlumCashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB17F1CC2990700C02199 /* PlumCashTests.m */; };
+		639AB18B1CC2990700C02199 /* PlumCashUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB18A1CC2990700C02199 /* PlumCashUITests.m */; };
+		639AB19A1CC2A58C00C02199 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1991CC2A58C00C02199 /* InitialViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		639AB17C1CC2990700C02199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639AB1571CC2990700C02199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639AB15E1CC2990700C02199;
+			remoteInfo = PlumCash;
+		};
+		639AB1871CC2990700C02199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639AB1571CC2990700C02199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639AB15E1CC2990700C02199;
+			remoteInfo = PlumCash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E8DD29E98E246B50054B090 /* Pods-PlumCashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumCashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.debug.xcconfig"; sourceTree = "<group>"; };
+		22176AFD5F819BA518B0196C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB1631CC2990700C02199 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		639AB1651CC2990700C02199 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		639AB1661CC2990700C02199 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		639AB1681CC2990700C02199 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		639AB1691CC2990700C02199 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		639AB16B1CC2990700C02199 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		639AB16C1CC2990700C02199 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		639AB16F1CC2990700C02199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		639AB1711CC2990700C02199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		639AB1741CC2990700C02199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		639AB1761CC2990700C02199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB17B1CC2990700C02199 /* PlumCashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlumCashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB17F1CC2990700C02199 /* PlumCashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlumCashTests.m; sourceTree = "<group>"; };
+		639AB1811CC2990700C02199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB1861CC2990700C02199 /* PlumCashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlumCashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639AB18A1CC2990700C02199 /* PlumCashUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlumCashUITests.m; sourceTree = "<group>"; };
+		639AB18C1CC2990700C02199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639AB1981CC2A58C00C02199 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = ViewControllers/InitialViewController.h; sourceTree = "<group>"; };
+		639AB1991CC2A58C00C02199 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = ViewControllers/InitialViewController.m; sourceTree = "<group>"; };
+		955D06BF179F8ABA3640311A /* Pods-PlumCashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumCashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.release.xcconfig"; sourceTree = "<group>"; };
+		B2CEB641478726B537675951 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DE7713FA700E6625ED90745D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DEF54916DBC74B350262B68D /* libPods-PlumCashTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlumCashTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		639AB15C1CC2990700C02199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E926A60908AB2D2774FBC9C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1781CC2990700C02199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C9A10AEC7768FF7094217A /* libPods-PlumCashTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1831CC2990700C02199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		639AB1561CC2990700C02199 = {
+			isa = PBXGroup;
+			children = (
+				639AB1611CC2990700C02199 /* PlumCash */,
+				639AB17E1CC2990700C02199 /* PlumCashTests */,
+				639AB1891CC2990700C02199 /* PlumCashUITests */,
+				639AB1601CC2990700C02199 /* Products */,
+				6B7653F5E0E60D51EA332F7E /* Pods */,
+				7AFB9F487D008BBD23B65CD2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		639AB1601CC2990700C02199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				639AB15F1CC2990700C02199 /* PlumCash.app */,
+				639AB17B1CC2990700C02199 /* PlumCashTests.xctest */,
+				639AB1861CC2990700C02199 /* PlumCashUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		639AB1611CC2990700C02199 /* PlumCash */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1651CC2990700C02199 /* AppDelegate.h */,
+				639AB1661CC2990700C02199 /* AppDelegate.m */,
+				639AB16E1CC2990700C02199 /* Main.storyboard */,
+				639AB1711CC2990700C02199 /* Assets.xcassets */,
+				639AB1731CC2990700C02199 /* LaunchScreen.storyboard */,
+				639AB1761CC2990700C02199 /* Info.plist */,
+				639AB19B1CC2A59100C02199 /* ViewControllers */,
+				639AB1621CC2990700C02199 /* Supporting Files */,
+			);
+			path = PlumCash;
+			sourceTree = "<group>";
+		};
+		639AB1621CC2990700C02199 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1631CC2990700C02199 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		639AB17E1CC2990700C02199 /* PlumCashTests */ = {
+			isa = PBXGroup;
+			children = (
+				639AB17F1CC2990700C02199 /* PlumCashTests.m */,
+				639AB1811CC2990700C02199 /* Info.plist */,
+			);
+			path = PlumCashTests;
+			sourceTree = "<group>";
+		};
+		639AB1891CC2990700C02199 /* PlumCashUITests */ = {
+			isa = PBXGroup;
+			children = (
+				639AB18A1CC2990700C02199 /* PlumCashUITests.m */,
+				639AB18C1CC2990700C02199 /* Info.plist */,
+			);
+			path = PlumCashUITests;
+			sourceTree = "<group>";
+		};
+		639AB19B1CC2A59100C02199 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1681CC2990700C02199 /* FirstViewController.h */,
+				639AB1691CC2990700C02199 /* FirstViewController.m */,
+				639AB16B1CC2990700C02199 /* SecondViewController.h */,
+				639AB16C1CC2990700C02199 /* SecondViewController.m */,
+				639AB1981CC2A58C00C02199 /* InitialViewController.h */,
+				639AB1991CC2A58C00C02199 /* InitialViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6B7653F5E0E60D51EA332F7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE7713FA700E6625ED90745D /* Pods.debug.xcconfig */,
+				B2CEB641478726B537675951 /* Pods.release.xcconfig */,
+				0E8DD29E98E246B50054B090 /* Pods-PlumCashTests.debug.xcconfig */,
+				955D06BF179F8ABA3640311A /* Pods-PlumCashTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7AFB9F487D008BBD23B65CD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22176AFD5F819BA518B0196C /* libPods.a */,
+				DEF54916DBC74B350262B68D /* libPods-PlumCashTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		639AB15E1CC2990700C02199 /* PlumCash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB18F1CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCash" */;
+			buildPhases = (
+				A653459C898FE0BA88F13BD2 /* Check Pods Manifest.lock */,
+				639AB15B1CC2990700C02199 /* Sources */,
+				639AB15C1CC2990700C02199 /* Frameworks */,
+				639AB15D1CC2990700C02199 /* Resources */,
+				A5389C4D0C873A7585A0C8DD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlumCash;
+			productName = PlumCash;
+			productReference = 639AB15F1CC2990700C02199 /* PlumCash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		639AB17A1CC2990700C02199 /* PlumCashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB1921CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashTests" */;
+			buildPhases = (
+				D1B85E5944E48518E0CBFEC6 /* Check Pods Manifest.lock */,
+				639AB1771CC2990700C02199 /* Sources */,
+				639AB1781CC2990700C02199 /* Frameworks */,
+				639AB1791CC2990700C02199 /* Resources */,
+				66DEB047367C9D9F126E901B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639AB17D1CC2990700C02199 /* PBXTargetDependency */,
+			);
+			name = PlumCashTests;
+			productName = PlumCashTests;
+			productReference = 639AB17B1CC2990700C02199 /* PlumCashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		639AB1851CC2990700C02199 /* PlumCashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639AB1951CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashUITests" */;
+			buildPhases = (
+				639AB1821CC2990700C02199 /* Sources */,
+				639AB1831CC2990700C02199 /* Frameworks */,
+				639AB1841CC2990700C02199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639AB1881CC2990700C02199 /* PBXTargetDependency */,
+			);
+			name = PlumCashUITests;
+			productName = PlumCashUITests;
+			productReference = 639AB1861CC2990700C02199 /* PlumCashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		639AB1571CC2990700C02199 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = SilverLogic;
+				TargetAttributes = {
+					639AB15E1CC2990700C02199 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					639AB17A1CC2990700C02199 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 639AB15E1CC2990700C02199;
+					};
+					639AB1851CC2990700C02199 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 639AB15E1CC2990700C02199;
+					};
+				};
+			};
+			buildConfigurationList = 639AB15A1CC2990700C02199 /* Build configuration list for PBXProject "PlumCash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 639AB1561CC2990700C02199;
+			productRefGroup = 639AB1601CC2990700C02199 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				639AB15E1CC2990700C02199 /* PlumCash */,
+				639AB17A1CC2990700C02199 /* PlumCashTests */,
+				639AB1851CC2990700C02199 /* PlumCashUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		639AB15D1CC2990700C02199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB1751CC2990700C02199 /* LaunchScreen.storyboard in Resources */,
+				639AB1721CC2990700C02199 /* Assets.xcassets in Resources */,
+				639AB1701CC2990700C02199 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1791CC2990700C02199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1841CC2990700C02199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66DEB047367C9D9F126E901B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5389C4D0C873A7585A0C8DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A653459C898FE0BA88F13BD2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1B85E5944E48518E0CBFEC6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		639AB15B1CC2990700C02199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB19A1CC2A58C00C02199 /* InitialViewController.m in Sources */,
+				639AB16D1CC2990700C02199 /* SecondViewController.m in Sources */,
+				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
+				639AB16A1CC2990700C02199 /* FirstViewController.m in Sources */,
+				639AB1641CC2990700C02199 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1771CC2990700C02199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB1801CC2990700C02199 /* PlumCashTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639AB1821CC2990700C02199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639AB18B1CC2990700C02199 /* PlumCashUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		639AB17D1CC2990700C02199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639AB15E1CC2990700C02199 /* PlumCash */;
+			targetProxy = 639AB17C1CC2990700C02199 /* PBXContainerItemProxy */;
+		};
+		639AB1881CC2990700C02199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639AB15E1CC2990700C02199 /* PlumCash */;
+			targetProxy = 639AB1871CC2990700C02199 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		639AB16E1CC2990700C02199 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639AB16F1CC2990700C02199 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		639AB1731CC2990700C02199 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639AB1741CC2990700C02199 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		639AB18D1CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		639AB18E1CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		639AB1901CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE7713FA700E6625ED90745D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlumCash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		639AB1911CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2CEB641478726B537675951 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlumCash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		639AB1931CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8DD29E98E246B50054B090 /* Pods-PlumCashTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlumCashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlumCash.app/PlumCash";
+			};
+			name = Debug;
+		};
+		639AB1941CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 955D06BF179F8ABA3640311A /* Pods-PlumCashTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlumCashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlumCash.app/PlumCash";
+			};
+			name = Release;
+		};
+		639AB1961CC2990700C02199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlumCashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlumCash;
+			};
+			name = Debug;
+		};
+		639AB1971CC2990700C02199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlumCashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverlogic.PlumCashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlumCash;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		639AB15A1CC2990700C02199 /* Build configuration list for PBXProject "PlumCash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB18D1CC2990700C02199 /* Debug */,
+				639AB18E1CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639AB18F1CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1901CC2990700C02199 /* Debug */,
+				639AB1911CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639AB1921CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1931CC2990700C02199 /* Debug */,
+				639AB1941CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639AB1951CC2990700C02199 /* Build configuration list for PBXNativeTarget "PlumCashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639AB1961CC2990700C02199 /* Debug */,
+				639AB1971CC2990700C02199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 639AB1571CC2990700C02199 /* Project object */;
+}
