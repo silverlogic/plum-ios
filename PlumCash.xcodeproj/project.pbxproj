@@ -19,6 +19,9 @@
 		639AB1801CC2990700C02199 /* PlumCashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB17F1CC2990700C02199 /* PlumCashTests.m */; };
 		639AB18B1CC2990700C02199 /* PlumCashUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB18A1CC2990700C02199 /* PlumCashUITests.m */; };
 		639AB19A1CC2A58C00C02199 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1991CC2A58C00C02199 /* InitialViewController.m */; };
+		639AB19F1CC2AA2700C02199 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB19E1CC2AA2700C02199 /* UIViewController+Alert.m */; };
+		639AB1A31CC2AD9B00C02199 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1A21CC2AD9B00C02199 /* User.m */; };
+		639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1A51CC2AF2C00C02199 /* NSObject+ProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		639AB18C1CC2990700C02199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639AB1981CC2A58C00C02199 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = ViewControllers/InitialViewController.h; sourceTree = "<group>"; };
 		639AB1991CC2A58C00C02199 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = ViewControllers/InitialViewController.m; sourceTree = "<group>"; };
+		639AB19D1CC2AA2700C02199 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Alert.h"; path = "Categories/UIViewController+Alert.h"; sourceTree = "<group>"; };
+		639AB19E1CC2AA2700C02199 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Alert.m"; path = "Categories/UIViewController+Alert.m"; sourceTree = "<group>"; };
+		639AB1A11CC2AD9B00C02199 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/User.h; sourceTree = "<group>"; };
+		639AB1A21CC2AD9B00C02199 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
+		639AB1A41CC2AF2C00C02199 /* NSObject+ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ProgressHUD.h"; path = "Categories/NSObject+ProgressHUD.h"; sourceTree = "<group>"; };
+		639AB1A51CC2AF2C00C02199 /* NSObject+ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ProgressHUD.m"; path = "Categories/NSObject+ProgressHUD.m"; sourceTree = "<group>"; };
 		955D06BF179F8ABA3640311A /* Pods-PlumCashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumCashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.release.xcconfig"; sourceTree = "<group>"; };
 		B2CEB641478726B537675951 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DE7713FA700E6625ED90745D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +135,8 @@
 				639AB1731CC2990700C02199 /* LaunchScreen.storyboard */,
 				639AB1761CC2990700C02199 /* Info.plist */,
 				639AB19B1CC2A59100C02199 /* ViewControllers */,
+				639AB1A01CC2AD8300C02199 /* Models */,
+				639AB19C1CC2A9CB00C02199 /* Categories */,
 				639AB1621CC2990700C02199 /* Supporting Files */,
 			);
 			path = PlumCash;
@@ -168,6 +179,26 @@
 				639AB1991CC2A58C00C02199 /* InitialViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		639AB19C1CC2A9CB00C02199 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				639AB19D1CC2AA2700C02199 /* UIViewController+Alert.h */,
+				639AB19E1CC2AA2700C02199 /* UIViewController+Alert.m */,
+				639AB1A41CC2AF2C00C02199 /* NSObject+ProgressHUD.h */,
+				639AB1A51CC2AF2C00C02199 /* NSObject+ProgressHUD.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		639AB1A01CC2AD8300C02199 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				639AB1A11CC2AD9B00C02199 /* User.h */,
+				639AB1A21CC2AD9B00C02199 /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		6B7653F5E0E60D51EA332F7E /* Pods */ = {
@@ -388,8 +419,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				639AB19A1CC2A58C00C02199 /* InitialViewController.m in Sources */,
+				639AB1A31CC2AD9B00C02199 /* User.m in Sources */,
+				639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */,
 				639AB16D1CC2990700C02199 /* SecondViewController.m in Sources */,
 				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
+				639AB19F1CC2AA2700C02199 /* UIViewController+Alert.m in Sources */,
 				639AB16A1CC2990700C02199 /* FirstViewController.m in Sources */,
 				639AB1641CC2990700C02199 /* main.m in Sources */,
 			);
