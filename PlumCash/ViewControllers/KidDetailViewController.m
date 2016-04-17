@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 
 @interface KidDetailViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *outerImage;
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *spentLabel;
@@ -46,6 +47,7 @@
 
 - (void)setKid:(Kid *)kid {
 	_kid = kid;
+	
     [self updateUI];
 }
 
@@ -56,6 +58,12 @@
     self.pointsBar.progress = self.kid.pointsGoal > 0 ? self.kid.points / self.kid.pointsGoal : 0;
     self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
     self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent), ceil(self.kid.allowance)];
+	self.image.layer.cornerRadius = _image.bounds.size.width/2;
+	self.image.layer.masksToBounds = YES;
+	self.outerImage.layer.cornerRadius = _outerImage.bounds.size.width/2;
+	self.outerImage.layer.masksToBounds = YES;
+	self.outerImage.backgroundColor = [UIColor orangeColor];
+
 }
 
 /*
