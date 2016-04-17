@@ -51,8 +51,10 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self loadKids];
-    [self loadCards];
+    if ([APIClient isAuthenticated]) {
+        [self loadKids];
+        [self loadCards];
+    }
 }
 
 - (void)refreshPulled {
