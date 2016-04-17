@@ -10,6 +10,21 @@
 
 @implementation Kid
 
++ (NSDictionary*)fieldMappings {
+    NSDictionary *fields = @{
+                             @"id": @"userId",
+                             @"email": @"email",
+                             @"name": @"name",
+                             @"first_name": @"firstName",
+                             @"last_name": @"lastName",
+                             @"password": @"password",
+                             @"token": @"token",
+                             @"avatar.url": @"imageUrl"
+                             };
+    NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
+    return fieldMappings;
+}
+
 
 #pragma mark - Mock
 + (NSArray*)mockKids {

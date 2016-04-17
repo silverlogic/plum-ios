@@ -23,14 +23,14 @@ typedef NS_ENUM(NSUInteger, Gender) {
 
 @interface User : NSObject
 
-@property (nonatomic, retain) NSString *email;
-@property (nonatomic, retain) NSString * firstName;
-@property (nonatomic, retain) NSString * lastName;
-@property (nonatomic, retain) NSString *password;
-@property (nonatomic, retain) NSString *token;
-@property (nonatomic, retain) NSNumber *userId;
-@property (nonatomic, retain) NSString *imageUrl;
-@property (nonatomic, retain) NSData *image;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, copy) NSString * firstName;
+@property (nonatomic, copy) NSString * lastName;
+@property (nonatomic, copy) NSString *password;
+@property (nonatomic, copy) NSString *token;
+@property (nonatomic, strong) NSNumber *userId;
+@property (nonatomic, copy) NSString *imageUrl;
+@property (nonatomic, strong) UIImage *image;
 @property (nonatomic) Gender gender;
 
 + (User *)currentUser;

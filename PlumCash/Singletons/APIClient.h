@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class User;
+@class Kid;
 
 typedef NS_ENUM(NSInteger, StatusCode) {
     StatusCodeUnauthorized = 401
@@ -39,7 +40,7 @@ typedef NS_ENUM(NSInteger, StatusCode) {
 + (void)forgotPasswordForEmail:(NSString*)email success:(void (^)(bool successful))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)changePassword:(NSString*)oldPassword toPassword:(NSString *)newPassword success:(void (^)(bool successful))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)facebookLogin:(NSString*)token success:(void (^)(User *user))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
-+ (void)getKidsSuccess:(void (^)(NSArray<User*> *kids))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
++ (void)getKidsSuccess:(void (^)(NSArray<Kid*> *kids))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 
 
 @end

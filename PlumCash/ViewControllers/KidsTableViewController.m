@@ -13,6 +13,7 @@
 #import "User.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "KidDetailViewController.h"
 
 static NSString *const kLogoutSegue = @"LogoutSegue";
 static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
@@ -31,13 +32,34 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.list = [NSMutableArray array];
-	[self.list addObjectsFromArray:[Kid mockKids]];
     
     if (![APIClient isAuthenticated]) {
         [self logout:NO];
         NSLog(@"missing authentication --> logout");
     }
+    
+    self.list = [NSMutableArray array];
+    [self loadKids];
+    
+    UIRefreshControl *refreshControl = [UIRefreshControl new];
+    [refreshControl addTarget:self action:@selector(refreshPulled) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+}
+
+- (void)refreshPulled {
+    [self loadKids];
+}
+
+- (void)loadKids {
+    [APIClient getKidsSuccess:^(NSArray<Kid *> *kids) {
+        [self.list removeAllObjects];
+        [self.list addObjectsFromArray:kids];
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    } failure:^(NSError *error, NSHTTPURLResponse *response) {
+        // tough luck
+        [self.refreshControl endRefreshing];
+    }];
 }
 
 - (void)logout:(BOOL)animated {
@@ -82,6 +104,14 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 	_list = list;
 	
 	[self.tableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[KidDetailViewController class]]) {
+        KidDetailViewController *controller = segue.destinationViewController;
+        KidTableViewCell *cell = (KidTableViewCell *)[self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+        controller.kid = cell.kid;
+    }
 }
 
 /*

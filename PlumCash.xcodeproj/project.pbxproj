@@ -338,6 +338,7 @@
 				TargetAttributes = {
 					639AB15E1CC2990700C02199 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4SB3F2S2K3;
 					};
 					639AB17A1CC2990700C02199 = {
 						CreatedOnToolsVersion = 7.3;
@@ -621,6 +622,7 @@
 			baseConfigurationReference = DE7713FA700E6625ED90745D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PlumCash/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -634,6 +636,7 @@
 			baseConfigurationReference = B2CEB641478726B537675951 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PlumCash/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

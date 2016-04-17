@@ -13,6 +13,7 @@
 #import "RKPathMatcher.h"
 #import "ExtendedError.h"
 #import "User.h"
+#import "Kid.h"
 
 //////////////////////////////////
 // Shared Instance
@@ -110,8 +111,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     [userResponseMapping addAttributeMappingsFromDictionary:[User fieldMappings]];
     
     /* KID */
-    RKObjectMapping *kidResponseMapping = [RKObjectMapping mappingForClass:[User class]];
-    [kidResponseMapping addAttributeMappingsFromDictionary:[User fieldMappings]];
+    RKObjectMapping *kidResponseMapping = [RKObjectMapping mappingForClass:[Kid class]];
+    [kidResponseMapping addAttributeMappingsFromDictionary:[Kid fieldMappings]];
     
     /* ********************************************* */
     /* ********* RESPONSE DESCRIPTORS ************** */
@@ -137,7 +138,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKObjectMapping *kidRequestMapping = [kidResponseMapping inverseMapping];
     // prevents null from being sent when not set
     kidRequestMapping.assignsDefaultValueForMissingAttributes = NO;
-    RKRequestDescriptor *kidRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:kidRequestMapping objectClass:[User class] rootKeyPath:nil method:RKRequestMethodAny];
+    RKRequestDescriptor *kidRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:kidRequestMapping objectClass:[Kid class] rootKeyPath:nil method:RKRequestMethodAny];
     
     /* USER */
 //    RKObjectMapping *userRequestMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
@@ -323,8 +324,18 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     }];
 }
 
-+ (void)getKidsSuccess:(void (^)(NSArray<User *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
-    // @TODO: fill in
++ (void)getKidsSuccess:(void (^)(NSArray<Kid *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
+    [[RKObjectManager sharedManager] getObject:[User currentUser] path:kKidsEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(mappingResult.array);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
 }
 
 

@@ -22,16 +22,17 @@ static User *_currentUser = nil;
 }
 
 + (NSDictionary*)fieldMappings {
-    NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                         @"id": @"userId",
-                                                                                         @"email": @"email",
-                                                                                         @"name": @"name",
-                                                                                         @"first_name": @"firstName",
-                                                                                         @"last_name": @"lastName",
-                                                                                         @"password": @"password",
-                                                                                         @"token": @"token",
-                                                                                         @"avatar.url": @"imageUrl"
-                                                                                         }];
+    NSDictionary *fields = @{
+                             @"id": @"userId",
+                             @"email": @"email",
+                             @"name": @"name",
+                             @"first_name": @"firstName",
+                             @"last_name": @"lastName",
+                             @"password": @"password",
+                             @"token": @"token",
+                             @"avatar.url": @"imageUrl"
+                             };
+    NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
     return fieldMappings;
 }
 

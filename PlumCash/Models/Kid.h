@@ -21,4 +21,6 @@
 
 + (NSArray*)mockKids;
 + (Kid*)mockKid;
++ (NSDictionary*)fieldMappings;
+
 @end
