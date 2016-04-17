@@ -25,8 +25,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *allowanceAmount;
 @property (strong, nonatomic) IBOutlet UILabel *currentCardDigits;
 @property (strong, nonatomic) IBOutlet UIButton *editCategoryButton;
-- (IBAction)cancelPressed:(id)sender;
-- (IBAction)savePressed:(id)sender;
 
 @end
 
@@ -63,16 +61,4 @@
 }
 */
 
-- (IBAction)cancelPressed:(id)sender {
-	[self dismissViewControllerAnimated:YES completion:^{
-		//yay
-	}];
- 
-}
-
-- (IBAction)savePressed:(id)sender {
-	[self dismissViewControllerAnimated:YES completion:^{
-		//yay
-	}];
-}
 @end

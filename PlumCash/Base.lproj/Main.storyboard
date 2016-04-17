@@ -326,18 +326,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="iLi-Od-7UZ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LL1-Sm-NN8">
-                            <connections>
-                                <action selector="cancelPressed:" destination="m5o-iO-oBS" id="CYp-pD-kcQ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hGd-r7-5gZ">
-                            <connections>
-                                <action selector="savePressed:" destination="m5o-iO-oBS" id="39a-i2-lfb"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="iLi-Od-7UZ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -376,14 +365,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZnZ-FL-Uty">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mA9-I4-cdC"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CEL-sf-iD2"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mA9-I4-cdC">
+                            <connections>
+                                <action selector="cancel:" destination="6OF-5i-H9z" id="HPz-if-7mU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CEL-sf-iD2">
+                            <connections>
+                                <action selector="save:" destination="6OF-5i-H9z" id="rQ3-4d-RNA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="dismissWithCancel" destination="mA9-I4-cdC" id="iZh-c6-kMD"/>
-                        <outlet property="saveKid" destination="CEL-sf-iD2" id="gwi-lY-ddt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBF-dc-cOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
