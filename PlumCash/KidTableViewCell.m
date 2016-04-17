@@ -46,10 +46,11 @@ static NSString *const _reuseIdentifier = @"KidTableViewCell";
 - (void)setKid:(Kid *)kid {
 	_kid = kid;
 	self.name.text = self.kid.name;
+	// reversed points and spent labels until points exist
     [self.profileImage setImageWithURL:kid.profileImageUrl placeholderImage:nil];
-	self.pointsBar.progress = self.kid.points / self.kid.pointsGoal;
-	self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
-	self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent.floatValue), ceil(self.kid.allowance.floatValue)];
+	self.pointsBar.progress = ceil(self.kid.spent.floatValue) / ceil(self.kid.allowance.floatValue);
+	self.spentLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
+	self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent.floatValue), ceil(self.kid.allowance.floatValue)];
 }
 
 

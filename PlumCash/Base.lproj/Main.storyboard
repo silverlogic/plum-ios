@@ -383,6 +383,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="iAG-eY-bL2"/>
                                                 </constraints>
+                                                <color key="progressTintColor" red="0.89411764709999997" green="0.47133359899999999" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-1Z-gAz">
                                                 <rect key="frame" x="4" y="18" width="133" height="15"/>
@@ -401,6 +402,8 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="iqd-Gd-YF2"/>
                                                 </constraints>
+                                                <color key="progressTintColor" red="0.89411764709999997" green="0.47133359898531468" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </progressView>
                                         </subviews>
                                         <constraints>
