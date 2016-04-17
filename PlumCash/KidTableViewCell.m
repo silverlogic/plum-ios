@@ -50,7 +50,7 @@ static NSString *const _reuseIdentifier = @"KidTableViewCell";
     [self.profileImage setImageWithURL:kid.profileImageUrl placeholderImage:nil];
 	self.pointsBar.progress = ceil(self.kid.spent.floatValue) / ceil(self.kid.allowance.floatValue);
 	self.spentLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
-	self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent.floatValue), ceil(self.kid.allowance.floatValue)];
+	self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f $", ceil(self.kid.spent.floatValue), ceil(self.kid.allowance.floatValue)];
 }
 
 
