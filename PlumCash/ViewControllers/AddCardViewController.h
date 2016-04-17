@@ -1,5 +1,5 @@
 //
-//  AddKidViewController.h
+//  AddCardViewController.h
 //  PlumCash
 //
 //  Created by Cristina on 4/16/16.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Kid.h"
 
-@interface AddKidViewController : UIViewController
+@interface AddCardViewController : UIViewController
 
 @end

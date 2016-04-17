@@ -22,7 +22,7 @@
     // Override point for customization after application launch.
     
     [APIClient sharedClient];
-//    [APIClient setToken:nil];
+    [APIClient setToken:nil];
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     
     return YES;
