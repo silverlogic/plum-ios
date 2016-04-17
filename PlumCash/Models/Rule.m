@@ -23,7 +23,7 @@
                              @"id": @"ruleId",
                              @"card": @"cardId",
                              @"type": @"type",
-                             @"categories": @"categories"
+                             @"merchant_types": @"categories"
                              };
     NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
     return fieldMappings;

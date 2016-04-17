@@ -29,7 +29,9 @@
                              @"token": @"token",
                              @"avatar.full_size": @"profileImageUrl",
                              @"total_amount_spent": @"spent",
-                             @"total_amount_on_cards": @"allowance"
+                             @"total_amount_on_cards": @"allowance",
+                             @"savings_match": @"savingsMatch",
+                             @"allowance": @"defaultAllowance"
                              };
     NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
     return fieldMappings;

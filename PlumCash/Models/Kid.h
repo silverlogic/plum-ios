@@ -19,6 +19,8 @@
 @property CGFloat pointsGoal;
 @property (nonatomic, strong) NSNumber *allowance;
 @property (nonatomic, strong) NSNumber *spent;
+@property (nonatomic, strong) NSNumber *defaultAllowance;
+@property (nonatomic, strong) NSNumber *savingsMatch;
 
 + (NSArray*)mockKids;
 + (Kid*)mockKid;
