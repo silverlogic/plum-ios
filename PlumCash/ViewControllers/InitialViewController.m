@@ -44,8 +44,8 @@
     
     [APIClient facebookLogin:result.token.tokenString success:^(User *user) {
         //
-//        [self dismissViewControllerAnimated:YES completion:nil];
-		[self performSegueWithIdentifier:@"addCardSegue" sender:self];
+        [self dismissViewControllerAnimated:YES completion:nil];
+//		[self performSegueWithIdentifier:@"addCardSegue" sender:self];
     } failure:^(NSError *error, NSHTTPURLResponse *response) {
         //
     }];

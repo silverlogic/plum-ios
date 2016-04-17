@@ -17,6 +17,7 @@ static User *_currentUser = nil;
     self = [super init];
     if (self) {
         _gender = GenderMale;
+        _cards = [NSMutableArray array];
     }
     return self;
 }

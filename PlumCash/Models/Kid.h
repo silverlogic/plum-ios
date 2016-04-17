@@ -19,7 +19,6 @@
 @property CGFloat pointsGoal;
 @property CGFloat allowance;
 @property CGFloat spent;
-@property (nonatomic, strong) NSMutableArray *cards;
 
 + (NSArray*)mockKids;
 + (Kid*)mockKid;

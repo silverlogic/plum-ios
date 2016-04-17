@@ -39,8 +39,10 @@ static NSString *const kForgotPasswordEndpoint = @"forgot-password";
 static NSString *const kChangePasswordEndpoint = @"users/change-password";
 static NSString *const kUserEndpoint = @"users/:userId";
 static NSString *const kMeEndpoint = @"users/me";
+static NSString *const kMyCardsEndpoint = @"users/:userId/me_cards";
 static NSString *const kKidsEndpoint = @"kids";
-static NSString *const kKidEndpoint = @"kid/:kidId";
+static NSString *const kKidEndpoint = @"kids/:kidId";
+static NSString *const kKidCardsEndpoint = @"kids/:kidId/cards";
 static NSString *const kCardsEndpoint = @"cards";
 
 typedef NS_ENUM(NSUInteger, PageSize) {
@@ -139,7 +141,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKResponseDescriptor *createKidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodPOST pathPattern:kKidsEndpoint keyPath:nil statusCodes:successStatusCodes];
     RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
     /* CARD */
-    RKResponseDescriptor *cardsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodGET pathPattern:kCardsEndpoint keyPath:kResults statusCodes:successStatusCodes];
+    RKResponseDescriptor *myCardsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodGET pathPattern:kMyCardsEndpoint keyPath:kResults statusCodes:successStatusCodes];
+    RKResponseDescriptor *kidCardsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodGET pathPattern:kKidCardsEndpoint keyPath:kResults statusCodes:successStatusCodes];
     RKResponseDescriptor *createCardResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodPOST pathPattern:kCardsEndpoint keyPath:nil statusCodes:successStatusCodes];
 //    RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
     
@@ -185,7 +188,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                createKidResponseDescriptor,
                                                kidsResponseDescriptor,
                                                kidResponseDescriptor,
-                                               cardsResponseDescriptor,
+                                               myCardsResponseDescriptor,
+                                               kidCardsResponseDescriptor,
                                                createCardResponseDescriptor,
                                                error400Descriptor,
                                                error500Descriptor
@@ -213,6 +217,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
 
 + (void)getMe:(void (^)(User *))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
     [[RKObjectManager sharedManager] getObject:[User currentUser] path:kMeEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        [User setCurrentUser:mappingResult.firstObject];
         if (success) {
             success(mappingResult.firstObject);
         }
@@ -399,8 +404,26 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     }];
 }
 
++ (void)getCardsForKid:(Kid*)kid success:(void (^)(NSArray<Card *> *cards))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
+    [[RKObjectManager sharedManager] getObjectsAtPath:RKPathFromPatternWithObject(kKidCardsEndpoint, kid) parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        [kid.cards removeAllObjects];
+        [kid.cards addObjectsFromArray:mappingResult.array];
+        if (success) {
+            success(mappingResult.array);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
 + (void)getCardsSuccess:(void (^)(NSArray<Card *> *cards))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
-    [[RKObjectManager sharedManager] getObjectsAtPath:kCardsEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    [[RKObjectManager sharedManager] getObjectsAtPath:RKPathFromPatternWithObject(kMyCardsEndpoint, [User currentUser]) parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        [[User currentUser].cards removeAllObjects];
+        [[User currentUser].cards addObjectsFromArray:mappingResult.array];
         if (success) {
             success(mappingResult.array);
         }

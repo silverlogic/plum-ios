@@ -14,11 +14,13 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "KidDetailViewController.h"
+#import "CardIO.h"
+#import "Card.h"
 
 static NSString *const kLogoutSegue = @"LogoutSegue";
 static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 
-@interface KidsTableViewController ()
+@interface KidsTableViewController () <CardIOPaymentViewControllerDelegate>
 
 @end
 
@@ -33,17 +35,24 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    if (![APIClient isAuthenticated]) {
-        [self logout:NO];
-        NSLog(@"missing authentication --> logout");
-    }
-    
     self.list = [NSMutableArray array];
-    [self loadKids];
     
     UIRefreshControl *refreshControl = [UIRefreshControl new];
     [refreshControl addTarget:self action:@selector(refreshPulled) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
+    
+    if (![APIClient isAuthenticated]) {
+        [self logout:NO];
+        NSLog(@"missing authentication --> logout");
+        return;
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self loadKids];
+    [self loadCards];
 }
 
 - (void)refreshPulled {
@@ -62,12 +71,22 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
     }];
 }
 
+- (void)loadCards {
+    [APIClient getCardsSuccess:^(NSArray<Card *> *cards) {
+        if (cards.count < 1) {
+            [self promptForCard];
+        }
+    } failure:nil];
+}
+
 - (void)logout:(BOOL)animated {
     [APIClient cancelAllRequests];
 //    [APIClient setToken:nil];
     [User setCurrentUser:nil];
-    FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
-    [loginManager logOut];
+    if (animated) {
+        FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+        [loginManager logOut];
+    }
     [self performSegueWithIdentifier:animated ? kLogoutSegue : kLogoutSegueNoAnimation sender:self];
     self.tabBarController.selectedIndex = 0;
 }
@@ -157,5 +176,39 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)promptForCard {
+    CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
+    scanViewController.hideCardIOLogo = YES;
+    scanViewController.collectCVV = NO;
+    scanViewController.collectCardholderName = YES;
+    [self presentViewController:scanViewController animated:YES completion:nil];
+}
+
+#pragma mark - card.io Delegate
+- (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    NSLog(@"User canceled payment info");
+    // Handle user cancellation here...
+    [scanViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    // Use the card info...
+    Card *card = [Card new];
+    card.ownerType = @"parent";
+    card.ownerId = [User currentUser].userId;
+    card.nameOnCard = info.cardholderName;
+    card.number = info.cardNumber;
+    card.expirationDate = [NSString stringWithFormat:@"%lu-%02lu-01", (unsigned long)info.expiryYear, (unsigned long)info.expiryMonth];
+    [[User currentUser].cards addObject:card];
+    
+    [APIClient createCard:card success:^(Card *card) {
+        //
+        [scanViewController dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(NSError *error, NSHTTPURLResponse *response) {
+        // oh no!
+        [scanViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
 
 @end

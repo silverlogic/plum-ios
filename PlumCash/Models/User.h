@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Card.h"
 
 static NSString *const kPassword = @"password";
 static NSString *const kNewPassword = @"new_password";
@@ -32,6 +33,7 @@ typedef NS_ENUM(NSUInteger, Gender) {
 @property (nonatomic, copy) NSString *imageUrl;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic) Gender gender;
+@property (nonatomic, strong) NSMutableArray <Card*> *cards;
 
 + (User *)currentUser;
 + (void)setCurrentUser:(User *)currentUser;

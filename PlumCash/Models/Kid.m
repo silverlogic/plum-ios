@@ -13,7 +13,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _cards = [NSMutableArray array];
+        //
     }
     return self;
 }

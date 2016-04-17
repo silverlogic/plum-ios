@@ -81,10 +81,6 @@
     }];
 }
 
-- (IBAction)addCardPressed:(id)sender {
-	[self performSegueWithIdentifier:@"addCardKidSegue" sender:self];
-}
-
 - (IBAction)editImagePressed:(id)sender {
     DBCameraViewController *cameraController = [DBCameraViewController initWithDelegate:self];
     [cameraController setForceQuadCrop:YES];

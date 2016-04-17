@@ -50,7 +50,9 @@
 - (void)setKid:(Kid *)kid {
 	_kid = kid;
     
-    // @TODO: load cards
+    [APIClient getCardsForKid:self.kid success:^(NSArray<Card *> *cards) {
+        [self updateUI];
+    } failure:nil];
     [self updateUI];
 }
 
@@ -61,6 +63,10 @@
     self.pointsBar.progress = self.kid.pointsGoal > 0 ? self.kid.points / self.kid.pointsGoal : 0;
     self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
     self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent), ceil(self.kid.allowance)];
+    if (self.kid.cards.count) {
+        NSString *number = self.kid.cards[self.kid.cards.count-1].number;
+        self.currentCardDigits.text = [NSString stringWithFormat:@"ending in **%@", [number substringFromIndex:12]];
+    }
 }
 
 - (IBAction)addCardPressed:(id)sender {
