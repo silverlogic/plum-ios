@@ -162,7 +162,7 @@
                                     <outlet property="pointsBarLabel" destination="Mm6-j5-sdd" id="GFs-dx-KzO"/>
                                     <outlet property="profileImage" destination="ZSu-tN-bEa" id="Fbl-dk-v84"/>
                                     <outlet property="spentLabel" destination="VkW-cY-b1f" id="6Df-Fr-c1g"/>
-                                    <segue destination="m5o-iO-oBS" kind="showDetail" id="xhx-hO-Sds"/>
+                                    <segue destination="m5o-iO-oBS" kind="show" action="showDetailViewController:sender:" id="xhx-hO-Sds"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -318,19 +318,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8A7-rC-0Tz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="iLi-Od-7UZ">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LL1-Sm-NN8"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hGd-r7-5gZ"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-HI-00u">
+                                <rect key="frame" x="160" y="445" width="94" height="30"/>
+                                <state key="normal" title="Edit Category"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="iLi-Od-7UZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LL1-Sm-NN8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hGd-r7-5gZ"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -340,6 +339,7 @@
                         <outlet property="cancelPressed" destination="LL1-Sm-NN8" id="6kO-YD-JhF"/>
                         <outlet property="currentCardDigits" destination="NKW-c4-uLX" id="Gfo-sd-jAj"/>
                         <outlet property="editCard" destination="5Hz-lX-P1P" id="naB-DP-5gs"/>
+                        <outlet property="editCategoryButton" destination="cJf-HI-00u" id="YeE-58-PuA"/>
                         <outlet property="image" destination="qCs-dg-tKI" id="v5E-7z-u1D"/>
                         <outlet property="name" destination="HWs-U2-xDG" id="uhm-h2-cNV"/>
                         <outlet property="pointsBar" destination="Hn0-60-Ll7" id="bl9-I4-X5z"/>
@@ -353,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR4-ia-hae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1158" y="766"/>
+            <point key="canvasLocation" x="-1158" y="916"/>
         </scene>
         <!--Add Kid View Controller-->
         <scene sceneID="PxF-sa-uuT">

@@ -26,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *currentCardDigits;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *cancelPressed;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *savePressed;
+@property (strong, nonatomic) IBOutlet UIButton *editCategoryButton;
 
 @end
 
