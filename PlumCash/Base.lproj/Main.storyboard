@@ -23,18 +23,18 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viW-7M-d9L" id="rKp-qD-reB">
-                                    <rect key="frame" x="0.0" y="0.0" width="561" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="561" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yCf-gh-IcW" userLabel="Chore">
-                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uqg-Ob-GpT">
-                                            <rect key="frame" x="516" y="12" width="45" height="19.5"/>
+                                            <rect key="frame" x="516" y="12" width="45" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -1040,6 +1040,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="db5-Lg-hC3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.25490196079999999" green="0.20784313730000001" blue="0.32549019610000002" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="48N-11-rO6" kind="relationship" relationship="rootViewController" id="XT4-PI-FXp"/>
@@ -1056,11 +1057,11 @@
         <image name="background" width="1080" height="1920"/>
         <image name="chores" width="24" height="24"/>
         <image name="kid" width="36" height="36"/>
-        <image name="settings" width="36" height="36"/>
+        <image name="settings" width="24" height="24"/>
         <image name="visa" width="598" height="598"/>
         <image name="wallet" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ynT-9a-zIQ"/>
+        <segue reference="jbm-x0-QVN"/>
     </inferredMetricsTieBreakers>
 </document>
