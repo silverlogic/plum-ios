@@ -130,7 +130,8 @@
     card.number = info.cardNumber;
     card.expirationDate = [NSString stringWithFormat:@"%lu-%02lu-01", (unsigned long)info.expiryYear, (unsigned long)info.expiryMonth];
     [self.kid.cards addObject:card];
-    self.currentCardDigits.text = info.redactedCardNumber;
+    
+    [self updateUI];
     
     [APIClient createCard:card success:^(Card *card) {
         //
