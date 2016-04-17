@@ -18,6 +18,8 @@
 @property (nonatomic, strong) NSString *expirationDate;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *subType;
+@property (nonatomic, strong) NSNumber *allowance;
+@property (nonatomic, strong) NSNumber *spent;
 
 + (NSDictionary*)fieldMappings;
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E926A60908AB2D2774FBC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22176AFD5F819BA518B0196C /* libPods.a */; };
 		45C9A10AEC7768FF7094217A /* libPods-PlumCashTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF54916DBC74B350262B68D /* libPods-PlumCashTests.a */; };
+		630015781CC385B900258052 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6300157A1CC385B900258052 /* Localizable.strings */; };
 		6307BB081CC354180007565C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6307BB071CC354180007565C /* Card.m */; };
 		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
 		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		0E8DD29E98E246B50054B090 /* Pods-PlumCashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumCashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		22176AFD5F819BA518B0196C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		630015791CC385B900258052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6300157B1CC385BB00258052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6307BB061CC354180007565C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
 		6307BB071CC354180007565C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				639AB1631CC2990700C02199 /* main.m */,
+				6300157A1CC385B900258052 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -386,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				639AB1751CC2990700C02199 /* LaunchScreen.storyboard in Resources */,
+				630015781CC385B900258052 /* Localizable.strings in Resources */,
 				639AB1721CC2990700C02199 /* Assets.xcassets in Resources */,
 				639AB1701CC2990700C02199 /* Main.storyboard in Resources */,
 			);
@@ -526,6 +531,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6300157A1CC385B900258052 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				630015791CC385B900258052 /* Base */,
+				6300157B1CC385BB00258052 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		639AB16E1CC2990700C02199 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

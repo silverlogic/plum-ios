@@ -11,6 +11,8 @@
 #import "CardIO.h"
 #import "APIClient.h"
 #import "Card.h"
+#import "NSObject+ProgressHUD.h"
+#import "UIViewController+Alert.h"
 
 @interface KidDetailViewController () <CardIOPaymentViewControllerDelegate>
 
@@ -65,7 +67,7 @@
     [self.image setImageWithURL:self.kid.profileImageUrl placeholderImage:nil];
     self.pointsBar.progress = self.kid.pointsGoal > 0 ? self.kid.points / self.kid.pointsGoal : 0;
     self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
-    self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent), ceil(self.kid.allowance)];
+    self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent.floatValue), ceil(self.kid.allowance.floatValue)];
     
     self.image.layer.cornerRadius = _image.bounds.size.width/2;
     self.image.layer.masksToBounds = YES;
@@ -86,6 +88,24 @@
     scanViewController.collectCardholderName = YES;
     [self presentViewController:scanViewController animated:YES completion:nil];
 }
+
+- (IBAction)sendAllowancePressed:(id)sender {
+    NSNumber *amount = [NSNumber numberWithFloat:self.allowanceAmount.text.floatValue];
+    
+    if ([User currentUser].cards.count == 0) {
+        [self showMessage:@"Please add your card to send money from first." withType:MessageTypeError];
+        return;
+    }
+    if (self.kid.cards.count == 0) {
+        [self showMessage:[NSString stringWithFormat:@"Please add a card for %@ to receive money on.", self.kid.name] withType:MessageTypeError];
+        return;
+    }
+    
+    [APIClient transferAmount:amount fromCard:[User currentUser].cards[0] toCard:self.kid.cards[0] success:^(BOOL successfully) {
+        [self showHudWithTitle:@"Transfer successful!"];
+     } failure:nil];
+}
+
 
 #pragma mark - card.io Delegate
 - (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {

@@ -450,6 +450,9 @@
                                                         <state key="normal" title="Send Allowance">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="sendAllowancePressed:" destination="m5o-iO-oBS" eventType="touchUpInside" id="1SM-A2-1Wj"/>
+                                                        </connections>
                                                     </button>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5AQ-wg-of3">
                                                         <rect key="frame" x="207" y="0.0" width="207" height="68"/>

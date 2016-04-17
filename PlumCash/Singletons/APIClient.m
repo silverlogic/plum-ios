@@ -44,6 +44,7 @@ static NSString *const kKidsEndpoint = @"kids";
 static NSString *const kKidEndpoint = @"kids/:kidId";
 static NSString *const kKidCardsEndpoint = @"kids/:kidId/cards";
 static NSString *const kCardsEndpoint = @"cards";
+static NSString *const kTransfersEndpoint = @"transfers";
 
 typedef NS_ENUM(NSUInteger, PageSize) {
     PageSizeDefault  = 20,
@@ -145,6 +146,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKResponseDescriptor *kidCardsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodGET pathPattern:kKidCardsEndpoint keyPath:kResults statusCodes:successStatusCodes];
     RKResponseDescriptor *createCardResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodPOST pathPattern:kCardsEndpoint keyPath:nil statusCodes:successStatusCodes];
 //    RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
+    /* TRANSFER */
+    RKResponseDescriptor *transferResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:emptyResponseMapping method:RKRequestMethodPOST pathPattern:kTransfersEndpoint keyPath:nil statusCodes:successStatusCodes];
     
     /* ********************************************* */
     /* ********** REQUEST DESCRIPTORS ************** */
@@ -191,6 +194,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                myCardsResponseDescriptor,
                                                kidCardsResponseDescriptor,
                                                createCardResponseDescriptor,
+                                               transferResponseDescriptor,
                                                error400Descriptor,
                                                error500Descriptor
                                                ]];
@@ -426,6 +430,25 @@ typedef NS_ENUM(NSUInteger, PageSize) {
         [[User currentUser].cards addObjectsFromArray:mappingResult.array];
         if (success) {
             success(mappingResult.array);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)transferAmount:(NSNumber*)amount fromCard:(Card*)sourceCard toCard:(Card *)destinationCard success:(void (^)(BOOL))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"from_card"] = sourceCard.cardId;
+    params[@"to_card"] = destinationCard.cardId;
+    params[@"amount"] = amount;
+    
+    [[RKObjectManager sharedManager] postObject:nil path:kTransfersEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(YES);
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         if (failure) {

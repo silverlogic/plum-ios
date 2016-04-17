@@ -46,6 +46,6 @@ typedef NS_ENUM(NSInteger, StatusCode) {
 + (void)createCard:(Card*)card success:(void (^)(Card *card))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)getCardsForKid:(Kid*)kid success:(void (^)(NSArray<Card *> *cards))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)getCardsSuccess:(void (^)(NSArray<Card *> *cards))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
-
++ (void)transferAmount:(NSNumber*)amount fromCard:(Card*)sourceCard toCard:(Card*)destinationCard success:(void (^)(BOOL successfully))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 
 @end

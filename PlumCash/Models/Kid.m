@@ -34,6 +34,15 @@
 }
 
 
+#pragma mark - Getters
+- (NSNumber *)allowance {
+    return [self.cards valueForKeyPath:@"@sum.allowance"];
+}
+- (NSNumber *)spent {
+    return [self.cards valueForKeyPath:@"@sum.spent"];
+}
+
+
 #pragma mark - Mock
 + (NSArray*)mockKids {
 	Kid *kid1 = [[Kid alloc] init];
@@ -42,8 +51,8 @@
 	kid1.name = @"Bob";
 	kid1.points = 20.0;
 	kid1.pointsGoal = 200.0;
-	kid1.allowance = 100;
-	kid1.spent = 10;
+	kid1.allowance = @100;
+	kid1.spent = @10;
 	
 	Kid *kid2 = [[Kid alloc] init];
 	kid2.profileImageUrl = [NSURL URLWithString:@"http://www.cutecatpix.com/pictures/Cutecatpictures-sad_Cat_Closeup.jpg"];
@@ -51,8 +60,8 @@
 	kid2.name = @"Bobbette";
 	kid2.points = 20.0;
 	kid2.pointsGoal = 200.0;
-	kid2.allowance = 100;
-	kid2.spent = 10;
+	kid2.allowance = @100;
+	kid2.spent = @10;
 	
 	return @[ kid1, kid2];
 }

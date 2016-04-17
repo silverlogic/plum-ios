@@ -17,8 +17,8 @@
 @property (nonatomic, strong) NSURL *profileImageUrl;
 @property CGFloat points;
 @property CGFloat pointsGoal;
-@property CGFloat allowance;
-@property CGFloat spent;
+@property (nonatomic, strong) NSNumber *allowance;
+@property (nonatomic, strong) NSNumber *spent;
 
 + (NSArray*)mockKids;
 + (Kid*)mockKid;

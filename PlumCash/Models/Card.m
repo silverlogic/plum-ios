@@ -19,7 +19,9 @@
                              @"number": @"number",
                              @"expiration_date": @"expirationDate",
                              @"type": @"type",
-                             @"sub_type": @"subType"
+                             @"sub_type": @"subType",
+                             @"amount_on_card": @"allowance",
+                             @"amount_spent": @"spent"
                              };
     NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
     return fieldMappings;
