@@ -22,7 +22,7 @@
     // Override point for customization after application launch.
     
     [APIClient sharedClient];
-    [APIClient setToken:nil];
+//    [APIClient setToken:nil];
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 	[[UITabBar appearance] setTintColor:[UIColor colorWithRed:228/255.0 green:26/255.0 blue:75/255.0 alpha:1.0]];
     return YES;
