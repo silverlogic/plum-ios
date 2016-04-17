@@ -244,20 +244,30 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-L2-tQ2">
+                                            <rect key="frame" x="463" y="7" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="rPh-L2-tQ2" secondAttribute="height" multiplier="1:1" id="3by-79-tzV"/>
+                                                <constraint firstAttribute="width" constant="24" id="fVv-6g-rWH"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Jak-eV-jmD" firstAttribute="top" secondItem="VkW-cY-b1f" secondAttribute="bottom" constant="8" symbolic="YES" id="6ZR-56-Fja"/>
                                         <constraint firstItem="mHL-Ml-Sxw" firstAttribute="leading" secondItem="d9Q-xr-Ikv" secondAttribute="trailing" constant="16" id="A0T-Ve-wlf"/>
+                                        <constraint firstItem="VkW-cY-b1f" firstAttribute="leading" secondItem="rPh-L2-tQ2" secondAttribute="trailing" constant="4" id="HPa-mv-m9Q"/>
                                         <constraint firstItem="ZSu-tN-bEa" firstAttribute="height" secondItem="d9Q-xr-Ikv" secondAttribute="height" multiplier="9:10" id="IyD-b3-asp"/>
                                         <constraint firstAttribute="trailing" secondItem="VkW-cY-b1f" secondAttribute="trailing" constant="8" id="Wma-d0-NiQ"/>
                                         <constraint firstItem="Jak-eV-jmD" firstAttribute="leading" secondItem="d9Q-xr-Ikv" secondAttribute="leading" constant="16" id="XYR-Bp-PGo"/>
                                         <constraint firstItem="VkW-cY-b1f" firstAttribute="top" secondItem="t6K-97-1Ae" secondAttribute="top" id="an5-pq-VIu"/>
                                         <constraint firstItem="d9Q-xr-Ikv" firstAttribute="top" secondItem="t6K-97-1Ae" secondAttribute="top" constant="8" id="axH-tA-PR3"/>
+                                        <constraint firstItem="rPh-L2-tQ2" firstAttribute="centerY" secondItem="VkW-cY-b1f" secondAttribute="centerY" constant="-2" id="diw-qJ-Laq"/>
                                         <constraint firstItem="5fE-oB-n7t" firstAttribute="leading" secondItem="d9Q-xr-Ikv" secondAttribute="trailing" constant="16" id="esB-Q3-S9A"/>
                                         <constraint firstItem="mHL-Ml-Sxw" firstAttribute="bottom" secondItem="t6K-97-1Ae" secondAttribute="centerY" id="f3a-6i-U5c"/>
                                         <constraint firstItem="d9Q-xr-Ikv" firstAttribute="centerY" secondItem="ZSu-tN-bEa" secondAttribute="centerY" id="him-PU-lkf"/>
                                         <constraint firstAttribute="trailing" secondItem="Jak-eV-jmD" secondAttribute="trailing" constant="8" id="iMu-5g-Cib"/>
                                         <constraint firstItem="d9Q-xr-Ikv" firstAttribute="centerX" secondItem="ZSu-tN-bEa" secondAttribute="centerX" id="jYF-NK-80p"/>
+                                        <constraint firstItem="rPh-L2-tQ2" firstAttribute="top" secondItem="t6K-97-1Ae" secondAttribute="top" priority="250" constant="4" id="js1-ha-2PZ"/>
                                         <constraint firstAttribute="bottom" secondItem="Jak-eV-jmD" secondAttribute="bottom" constant="4" id="lVb-7l-w9f"/>
                                         <constraint firstItem="d9Q-xr-Ikv" firstAttribute="leading" secondItem="t6K-97-1Ae" secondAttribute="leading" constant="8" id="nO0-Ap-1qH"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="5fE-oB-n7t" secondAttribute="trailing" id="ueo-dj-XLX"/>
@@ -792,6 +802,7 @@
         <image name="kid" width="36" height="36"/>
         <image name="settings" width="36" height="36"/>
         <image name="visa" width="598" height="598"/>
+        <image name="wallet" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ynT-9a-zIQ"/>
