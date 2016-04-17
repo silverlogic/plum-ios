@@ -13,6 +13,7 @@
 		6300157E1CC38B7400258052 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300157D1CC38B7400258052 /* TransactionsViewController.m */; };
 		630015811CC38C9A00258052 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015801CC38C9A00258052 /* Transaction.m */; };
 		630015851CC38FF000258052 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015841CC38FF000258052 /* TransactionTableViewCell.m */; };
+		630015881CC3A14C00258052 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015871CC3A14C00258052 /* CategoriesTableViewController.m */; };
 		6307BB081CC354180007565C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6307BB071CC354180007565C /* Card.m */; };
 		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
 		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
@@ -64,6 +65,8 @@
 		630015801CC38C9A00258052 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = Models/Transaction.m; sourceTree = "<group>"; };
 		630015831CC38FF000258052 /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionTableViewCell.h; path = Views/TransactionTableViewCell.h; sourceTree = "<group>"; };
 		630015841CC38FF000258052 /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionTableViewCell.m; path = Views/TransactionTableViewCell.m; sourceTree = "<group>"; };
+		630015861CC3A14C00258052 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ViewControllers/CategoriesTableViewController.h; sourceTree = "<group>"; };
+		630015871CC3A14C00258052 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ViewControllers/CategoriesTableViewController.m; sourceTree = "<group>"; };
 		6307BB061CC354180007565C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
 		6307BB071CC354180007565C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +237,8 @@
 				6BD5C4171CC31CA8004F7E13 /* AddCardViewController.m */,
 				6300157C1CC38B7400258052 /* TransactionsViewController.h */,
 				6300157D1CC38B7400258052 /* TransactionsViewController.m */,
+				630015861CC3A14C00258052 /* CategoriesTableViewController.h */,
+				630015871CC3A14C00258052 /* CategoriesTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				630015811CC38C9A00258052 /* Transaction.m in Sources */,
 				639AB19A1CC2A58C00C02199 /* InitialViewController.m in Sources */,
 				6BD5C4051CC2BE23004F7E13 /* AddKidViewController.m in Sources */,
+				630015881CC3A14C00258052 /* CategoriesTableViewController.m in Sources */,
 				6BD5C4151CC2CE1A004F7E13 /* Kid.m in Sources */,
 				6BD5C4121CC2C102004F7E13 /* KidTableViewCell.m in Sources */,
 				639AB1A31CC2AD9B00C02199 /* User.m in Sources */,

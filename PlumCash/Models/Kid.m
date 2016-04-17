@@ -28,8 +28,8 @@
                              @"password": @"password",
                              @"token": @"token",
                              @"avatar.full_size": @"profileImageUrl",
-                             @"total_amount_spent": @"allowance",
-                             @"total_amount_on_cards": @"spent"
+                             @"total_amount_spent": @"spent",
+                             @"total_amount_on_cards": @"allowance"
                              };
     NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
     return fieldMappings;

@@ -483,6 +483,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     }];
 }
 
++ (void)getRulesSuccess:(void (^)(NSArray<Rule *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
+    // TODO: implement XD
+}
+
 
 #pragma mark - Helpers
 + (BOOL)isAuthenticated {
