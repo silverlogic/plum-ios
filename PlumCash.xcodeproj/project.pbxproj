@@ -28,6 +28,7 @@
 		6BD5C40E1CC2BF04004F7E13 /* KidsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C40D1CC2BF04004F7E13 /* KidsTableViewController.m */; };
 		6BD5C4121CC2C102004F7E13 /* KidTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C4111CC2C102004F7E13 /* KidTableViewCell.m */; };
 		6BD5C4151CC2CE1A004F7E13 /* Kid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C4141CC2CE1A004F7E13 /* Kid.m */; };
+		6BD5C4181CC31CA8004F7E13 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5C4171CC31CA8004F7E13 /* AddCardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		6BD5C4111CC2C102004F7E13 /* KidTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidTableViewCell.m; sourceTree = "<group>"; };
 		6BD5C4131CC2CE1A004F7E13 /* Kid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kid.h; path = Models/Kid.h; sourceTree = "<group>"; };
 		6BD5C4141CC2CE1A004F7E13 /* Kid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Kid.m; path = Models/Kid.m; sourceTree = "<group>"; };
+		6BD5C4161CC31CA8004F7E13 /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardViewController.h; path = ViewControllers/AddCardViewController.h; sourceTree = "<group>"; };
+		6BD5C4171CC31CA8004F7E13 /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardViewController.m; path = ViewControllers/AddCardViewController.m; sourceTree = "<group>"; };
 		955D06BF179F8ABA3640311A /* Pods-PlumCashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumCashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.release.xcconfig"; sourceTree = "<group>"; };
 		B2CEB641478726B537675951 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DE7713FA700E6625ED90745D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				6BD5C40A1CC2BED8004F7E13 /* SettingsTableViewController.m */,
 				6BD5C40C1CC2BF04004F7E13 /* KidsTableViewController.h */,
 				6BD5C40D1CC2BF04004F7E13 /* KidsTableViewController.m */,
+				6BD5C4161CC31CA8004F7E13 /* AddCardViewController.h */,
+				6BD5C4171CC31CA8004F7E13 /* AddCardViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				6BD5C40B1CC2BED8004F7E13 /* SettingsTableViewController.m in Sources */,
 				6BD5C40E1CC2BF04004F7E13 /* KidsTableViewController.m in Sources */,
 				639AB1AD1CC2C1AD00C02199 /* ExtendedError.m in Sources */,
+				6BD5C4181CC31CA8004F7E13 /* AddCardViewController.m in Sources */,
 				6BD5C4021CC2BDED004F7E13 /* KidDetailViewController.m in Sources */,
 				639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */,
 				639AB1AA1CC2BA0000C02199 /* APIClient.m in Sources */,

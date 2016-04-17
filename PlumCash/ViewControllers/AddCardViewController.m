@@ -1,28 +1,23 @@
 //
-//  AddKidViewController.m
+//  AddCardViewController.m
 //  PlumCash
 //
 //  Created by Cristina on 4/16/16.
 //  Copyright © 2016 SilverLogic. All rights reserved.
 //
 
-#import "AddKidViewController.h"
+#import "AddCardViewController.h"
 
-@interface AddKidViewController ()
-@property (strong, nonatomic) IBOutlet UITextField *name;
-
-- (IBAction)cancel:(id)sender;
-- (IBAction)save:(id)sender;
-- (IBAction)editImagePressed:(id)sender;
-- (IBAction)editCategoriesPressed:(id)sender;
-@property (strong, nonatomic) IBOutlet UITextField *cardName;
+@interface AddCardViewController ()
+- (IBAction)cancelPressed:(id)sender;
+- (IBAction)savePressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *cardHolderName;
 @property (strong, nonatomic) IBOutlet UITextField *cardNumber;
-@property (strong, nonatomic) IBOutlet UITextField *cardExpirationDate;
-@property (strong, nonatomic) IBOutlet UITextField *allowance;
+@property (strong, nonatomic) IBOutlet UITextField *cardDate;
 
 @end
 
-@implementation AddKidViewController
+@implementation AddCardViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,25 +39,15 @@
 }
 */
 
-- (IBAction)cancel:(id)sender {
+- (IBAction)cancelPressed:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:^{
 		//yay
 	}];
 }
 
-- (IBAction)save:(id)sender {
+- (IBAction)savePressed:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:^{
 		//yay
 	}];
-}
-
-- (IBAction)addCardPressed:(id)sender {
-	[self performSegueWithIdentifier:@"addCardKidSegue" sender:self];
-
-}
-- (IBAction)editImagePressed:(id)sender {
-}
-
-- (IBAction)editCategoriesPressed:(id)sender {
 }
 @end
