@@ -113,10 +113,10 @@
     }
     
     [APIClient transferAmount:amount fromCard:[User currentUser].cards[0] toCard:self.kid.cards[0] success:^(BOOL successfully) {
-        [self showHudWithTitle:@"Transfer successful!"];
         self.kid.allowance = [NSNumber numberWithFloat:(self.kid.allowance.floatValue + amount.floatValue)];
         self.kid.cards[0].allowance = [NSNumber numberWithFloat:(self.kid.cards[0].allowance.floatValue + amount.floatValue)];
         [self updateUI];
+        [self showHudWithTitle:@"Transfer successful!"];
      } failure:nil];
 }
 

@@ -13,6 +13,7 @@
 @class Card;
 @class Transaction;
 @class Rule;
+@class Chore;
 
 typedef NS_ENUM(NSInteger, StatusCode) {
     StatusCodeUnauthorized = 401
@@ -52,5 +53,6 @@ typedef NS_ENUM(NSInteger, StatusCode) {
 + (void)getTransactionsForCard:(Card*)card success:(void (^)(NSArray<Transaction *> *transactions))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)getRulesForCard:(Card*)card success:(void (^)(NSArray<Rule *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure;
 + (void)createRule:(Rule*)rule success:(void (^)(Rule *rule))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
++ (void)getChoresForKid:(Kid*)kid success:(void (^)(NSArray<Chore *> *chores))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure;
 
 @end

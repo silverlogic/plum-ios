@@ -17,6 +17,7 @@
 #import "Card.h"
 #import "Transaction.h"
 #import "Rule.h"
+#import "Chore.h"
 
 //////////////////////////////////
 // Shared Instance
@@ -49,6 +50,7 @@ static NSString *const kCardsEndpoint = @"cards";
 static NSString *const kTransfersEndpoint = @"transfers";
 static NSString *const kTransactionsEndpoint = @"transactions";
 static NSString *const kRulesEndpoint = @"rules";
+static NSString *const kChoresEndpoint = @"chores";
 
 typedef NS_ENUM(NSUInteger, PageSize) {
     PageSizeDefault  = 20,
@@ -135,6 +137,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKObjectMapping *ruleResponseMapping = [RKObjectMapping mappingForClass:[Rule class]];
     [ruleResponseMapping addAttributeMappingsFromDictionary:[Rule fieldMappings]];
     
+    /* CHORE */
+    RKObjectMapping *choreResponseMapping = [RKObjectMapping mappingForClass:[Chore class]];
+    [choreResponseMapping addAttributeMappingsFromDictionary:[Chore fieldMappings]];
+    
     /* ********************************************* */
     /* ********* RESPONSE DESCRIPTORS ************** */
     /* SIGNUP */
@@ -165,6 +171,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     /* RULE */
     RKResponseDescriptor *rulesResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:ruleResponseMapping method:RKRequestMethodGET pathPattern:kRulesEndpoint keyPath:kResults statusCodes:successStatusCodes];
     RKResponseDescriptor *createRuleResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:ruleResponseMapping method:RKRequestMethodPOST pathPattern:kRulesEndpoint keyPath:nil statusCodes:successStatusCodes];
+    /* CHORE */
+    RKResponseDescriptor *choresResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:choreResponseMapping method:RKRequestMethodGET pathPattern:kChoresEndpoint keyPath:kResults statusCodes:successStatusCodes];
     
     /* ********************************************* */
     /* ********** REQUEST DESCRIPTORS ************** */
@@ -222,6 +230,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                transferResponseDescriptor,
                                                transactionsResponseDescriptor,
                                                rulesResponseDescriptor,
+                                               choresResponseDescriptor,
                                                error400Descriptor,
                                                error500Descriptor
                                                ]];
@@ -522,6 +531,25 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     [[RKObjectManager sharedManager] postObject:rule path:kRulesEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         if (success) {
             success(rule);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)getChoresForKid:(Kid*)kid success:(void (^)(NSArray<Chore *> *chores))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
+    NSMutableDictionary *params = @{ }.mutableCopy;
+    if (kid) {
+        params[@"kid"] = kid.kidId;
+    }
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:kChoresEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(mappingResult.array);
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         if (failure) {

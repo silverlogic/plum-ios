@@ -15,6 +15,8 @@
 		630015851CC38FF000258052 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015841CC38FF000258052 /* TransactionTableViewCell.m */; };
 		630015881CC3A14C00258052 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015871CC3A14C00258052 /* CategoriesTableViewController.m */; };
 		6300158B1CC3A5E500258052 /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300158A1CC3A5E500258052 /* Rule.m */; };
+		6300158E1CC3BB9600258052 /* ChoresTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300158D1CC3BB9600258052 /* ChoresTableViewController.m */; };
+		630015911CC3BCD800258052 /* Chore.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015901CC3BCD800258052 /* Chore.m */; };
 		6307BB081CC354180007565C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6307BB071CC354180007565C /* Card.m */; };
 		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
 		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
@@ -70,6 +72,10 @@
 		630015871CC3A14C00258052 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ViewControllers/CategoriesTableViewController.m; sourceTree = "<group>"; };
 		630015891CC3A5E500258052 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rule.h; path = Models/Rule.h; sourceTree = "<group>"; };
 		6300158A1CC3A5E500258052 /* Rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rule.m; path = Models/Rule.m; sourceTree = "<group>"; };
+		6300158C1CC3BB9600258052 /* ChoresTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChoresTableViewController.h; path = ViewControllers/ChoresTableViewController.h; sourceTree = "<group>"; };
+		6300158D1CC3BB9600258052 /* ChoresTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoresTableViewController.m; path = ViewControllers/ChoresTableViewController.m; sourceTree = "<group>"; };
+		6300158F1CC3BCD800258052 /* Chore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chore.h; path = Models/Chore.h; sourceTree = "<group>"; };
+		630015901CC3BCD800258052 /* Chore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chore.m; path = Models/Chore.m; sourceTree = "<group>"; };
 		6307BB061CC354180007565C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
 		6307BB071CC354180007565C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +248,8 @@
 				6300157D1CC38B7400258052 /* TransactionsViewController.m */,
 				630015861CC3A14C00258052 /* CategoriesTableViewController.h */,
 				630015871CC3A14C00258052 /* CategoriesTableViewController.m */,
+				6300158C1CC3BB9600258052 /* ChoresTableViewController.h */,
+				6300158D1CC3BB9600258052 /* ChoresTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +280,8 @@
 				630015801CC38C9A00258052 /* Transaction.m */,
 				630015891CC3A5E500258052 /* Rule.h */,
 				6300158A1CC3A5E500258052 /* Rule.m */,
+				6300158F1CC3BCD800258052 /* Chore.h */,
+				630015901CC3BCD800258052 /* Chore.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -520,6 +530,7 @@
 				6BD5C4151CC2CE1A004F7E13 /* Kid.m in Sources */,
 				6BD5C4121CC2C102004F7E13 /* KidTableViewCell.m in Sources */,
 				639AB1A31CC2AD9B00C02199 /* User.m in Sources */,
+				6300158E1CC3BB9600258052 /* ChoresTableViewController.m in Sources */,
 				6BD5C40B1CC2BED8004F7E13 /* SettingsTableViewController.m in Sources */,
 				6BD5C40E1CC2BF04004F7E13 /* KidsTableViewController.m in Sources */,
 				639AB1AD1CC2C1AD00C02199 /* ExtendedError.m in Sources */,
@@ -528,6 +539,7 @@
 				6BD5C4021CC2BDED004F7E13 /* KidDetailViewController.m in Sources */,
 				639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */,
 				6307BB081CC354180007565C /* Card.m in Sources */,
+				630015911CC3BCD800258052 /* Chore.m in Sources */,
 				639AB1AA1CC2BA0000C02199 /* APIClient.m in Sources */,
 				6300157E1CC38B7400258052 /* TransactionsViewController.m in Sources */,
 				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
