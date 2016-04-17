@@ -13,6 +13,8 @@
 #import "Card.h"
 #import "NSObject+ProgressHUD.h"
 #import "UIViewController+Alert.h"
+#import "TransactionsViewController.h"
+#import "TransactionTableViewCell.h"
 
 @interface KidDetailViewController () <CardIOPaymentViewControllerDelegate>
 
@@ -33,6 +35,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *allowanceAmount;
 @property (strong, nonatomic) IBOutlet UILabel *currentCardDigits;
 @property (strong, nonatomic) IBOutlet UIButton *editCategoryButton;
+@property (weak, nonatomic) IBOutlet UIButton *viewTransactionsButton;
+
 
 @end
 
@@ -78,6 +82,9 @@
     if (self.kid.cards.count) {
         NSString *number = self.kid.cards[self.kid.cards.count-1].number;
         self.currentCardDigits.text = [NSString stringWithFormat:@"ending in **%@", [number substringFromIndex:12]];
+        self.viewTransactionsButton.hidden = NO;
+    } else {
+        self.viewTransactionsButton.hidden = YES;
     }
 }
 
@@ -135,14 +142,12 @@
 }
 
 
-/*
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.destinationViewController isKindOfClass:[TransactionsViewController class]]) {
+        TransactionsViewController *controller = segue.destinationViewController;
+        controller.card = self.kid.cards[0];
+    }
 }
-*/
 
 @end

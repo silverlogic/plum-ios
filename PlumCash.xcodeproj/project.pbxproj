@@ -10,6 +10,9 @@
 		2E926A60908AB2D2774FBC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22176AFD5F819BA518B0196C /* libPods.a */; };
 		45C9A10AEC7768FF7094217A /* libPods-PlumCashTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF54916DBC74B350262B68D /* libPods-PlumCashTests.a */; };
 		630015781CC385B900258052 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6300157A1CC385B900258052 /* Localizable.strings */; };
+		6300157E1CC38B7400258052 /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300157D1CC38B7400258052 /* TransactionsViewController.m */; };
+		630015811CC38C9A00258052 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015801CC38C9A00258052 /* Transaction.m */; };
+		630015851CC38FF000258052 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015841CC38FF000258052 /* TransactionTableViewCell.m */; };
 		6307BB081CC354180007565C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6307BB071CC354180007565C /* Card.m */; };
 		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
 		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
@@ -55,6 +58,12 @@
 		22176AFD5F819BA518B0196C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		630015791CC385B900258052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6300157B1CC385BB00258052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6300157C1CC38B7400258052 /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionsViewController.h; path = ViewControllers/TransactionsViewController.h; sourceTree = "<group>"; };
+		6300157D1CC38B7400258052 /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionsViewController.m; path = ViewControllers/TransactionsViewController.m; sourceTree = "<group>"; };
+		6300157F1CC38C9A00258052 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transaction.h; path = Models/Transaction.h; sourceTree = "<group>"; };
+		630015801CC38C9A00258052 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = Models/Transaction.m; sourceTree = "<group>"; };
+		630015831CC38FF000258052 /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionTableViewCell.h; path = Views/TransactionTableViewCell.h; sourceTree = "<group>"; };
+		630015841CC38FF000258052 /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionTableViewCell.m; path = Views/TransactionTableViewCell.m; sourceTree = "<group>"; };
 		6307BB061CC354180007565C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
 		6307BB071CC354180007565C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +139,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630015821CC38FDA00258052 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				630015831CC38FF000258052 /* TransactionTableViewCell.h */,
+				630015841CC38FF000258052 /* TransactionTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		639AB1561CC2990700C02199 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +173,7 @@
 		639AB1611CC2990700C02199 /* PlumCash */ = {
 			isa = PBXGroup;
 			children = (
+				630015821CC38FDA00258052 /* Views */,
 				639AB1651CC2990700C02199 /* AppDelegate.h */,
 				639AB1661CC2990700C02199 /* AppDelegate.m */,
 				639AB16E1CC2990700C02199 /* Main.storyboard */,
@@ -213,6 +232,8 @@
 				6BD5C40D1CC2BF04004F7E13 /* KidsTableViewController.m */,
 				6BD5C4161CC31CA8004F7E13 /* AddCardViewController.h */,
 				6BD5C4171CC31CA8004F7E13 /* AddCardViewController.m */,
+				6300157C1CC38B7400258052 /* TransactionsViewController.h */,
+				6300157D1CC38B7400258052 /* TransactionsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +260,8 @@
 				6BD5C4141CC2CE1A004F7E13 /* Kid.m */,
 				6307BB061CC354180007565C /* Card.h */,
 				6307BB071CC354180007565C /* Card.m */,
+				6300157F1CC38C9A00258052 /* Transaction.h */,
+				630015801CC38C9A00258052 /* Transaction.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -480,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630015811CC38C9A00258052 /* Transaction.m in Sources */,
 				639AB19A1CC2A58C00C02199 /* InitialViewController.m in Sources */,
 				6BD5C4051CC2BE23004F7E13 /* AddKidViewController.m in Sources */,
 				6BD5C4151CC2CE1A004F7E13 /* Kid.m in Sources */,
@@ -489,10 +513,12 @@
 				6BD5C40E1CC2BF04004F7E13 /* KidsTableViewController.m in Sources */,
 				639AB1AD1CC2C1AD00C02199 /* ExtendedError.m in Sources */,
 				6BD5C4181CC31CA8004F7E13 /* AddCardViewController.m in Sources */,
+				630015851CC38FF000258052 /* TransactionTableViewCell.m in Sources */,
 				6BD5C4021CC2BDED004F7E13 /* KidDetailViewController.m in Sources */,
 				639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */,
 				6307BB081CC354180007565C /* Card.m in Sources */,
 				639AB1AA1CC2BA0000C02199 /* APIClient.m in Sources */,
+				6300157E1CC38B7400258052 /* TransactionsViewController.m in Sources */,
 				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
 				639AB19F1CC2AA2700C02199 /* UIViewController+Alert.m in Sources */,
 				639AB1641CC2990700C02199 /* main.m in Sources */,

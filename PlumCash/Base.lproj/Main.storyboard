@@ -505,6 +505,16 @@
                                                     <constraint firstItem="NKW-c4-uLX" firstAttribute="top" secondItem="oRB-72-yee" secondAttribute="top" id="r1g-6P-BKU"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3S-8Y-Xrs">
+                                                <rect key="frame" x="145" y="202" width="125" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.53264449700000005" blue="0.23590693069999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="View Transactions">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Uec-Jt-R8j" kind="show" identifier="TransactionsSegue" id="5Qu-Mq-thF"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="jrt-5d-tUj" firstAttribute="leading" secondItem="8TQ-iF-ulb" secondAttribute="leading" constant="32" id="2L6-ku-cc2"/>
@@ -584,11 +594,56 @@
                         <outlet property="rewardContent" destination="NI7-3d-2nm" id="Qvm-vt-9Cx"/>
                         <outlet property="spentBarProgress" destination="3nA-BV-wDf" id="vea-sj-CdY"/>
                         <outlet property="spentLabel" destination="aJU-7m-sVR" id="cgK-ZF-frE"/>
+                        <outlet property="viewTransactionsButton" destination="I3S-8Y-Xrs" id="wFW-UL-hba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR4-ia-hae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1158" y="916"/>
+        </scene>
+        <!--Transactions View Controller-->
+        <scene sceneID="pAS-LE-0yq">
+            <objects>
+                <tableViewController id="Uec-Jt-R8j" customClass="TransactionsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ep0-iz-aPu">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTableViewCell" textLabel="MDI-z0-NvD" detailTextLabel="iuG-OF-bml" style="IBUITableViewCellStyleValue1" id="eEF-oR-6yG" customClass="TransactionTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eEF-oR-6yG" id="EE5-cF-1hg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MDI-z0-NvD">
+                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iuG-OF-bml">
+                                            <rect key="frame" x="357.5" y="12" width="41.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Uec-Jt-R8j" id="FNb-SC-Ylb"/>
+                            <outlet property="delegate" destination="Uec-Jt-R8j" id="9Ue-Fd-pb3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b61-ld-O6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-560" y="916"/>
         </scene>
         <!--Add Kid View Controller-->
         <scene sceneID="PxF-sa-uuT">

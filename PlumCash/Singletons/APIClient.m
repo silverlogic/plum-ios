@@ -15,6 +15,7 @@
 #import "User.h"
 #import "Kid.h"
 #import "Card.h"
+#import "Transaction.h"
 
 //////////////////////////////////
 // Shared Instance
@@ -45,6 +46,7 @@ static NSString *const kKidEndpoint = @"kids/:kidId";
 static NSString *const kKidCardsEndpoint = @"kids/:kidId/cards";
 static NSString *const kCardsEndpoint = @"cards";
 static NSString *const kTransfersEndpoint = @"transfers";
+static NSString *const kTransactionsEndpoint = @"transactions";
 
 typedef NS_ENUM(NSUInteger, PageSize) {
     PageSizeDefault  = 20,
@@ -123,6 +125,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKObjectMapping *cardResponseMapping = [RKObjectMapping mappingForClass:[Card class]];
     [cardResponseMapping addAttributeMappingsFromDictionary:[Card fieldMappings]];
     
+    /* TRANSACTION */
+    RKObjectMapping *transactionResponseMapping = [RKObjectMapping mappingForClass:[Transaction class]];
+    [transactionResponseMapping addAttributeMappingsFromDictionary:[Transaction fieldMappings]];
+    
     /* ********************************************* */
     /* ********* RESPONSE DESCRIPTORS ************** */
     /* SIGNUP */
@@ -148,7 +154,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
 //    RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
     /* TRANSFER */
     RKResponseDescriptor *transferResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:emptyResponseMapping method:RKRequestMethodPOST pathPattern:kTransfersEndpoint keyPath:nil statusCodes:successStatusCodes];
-    
+    /* TRANSACTION */
+    RKResponseDescriptor *transactionsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:transactionResponseMapping method:RKRequestMethodGET pathPattern:kTransactionsEndpoint keyPath:kResults statusCodes:successStatusCodes];
     /* ********************************************* */
     /* ********** REQUEST DESCRIPTORS ************** */
     /* KID */
@@ -195,6 +202,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                kidCardsResponseDescriptor,
                                                createCardResponseDescriptor,
                                                transferResponseDescriptor,
+                                               transactionsResponseDescriptor,
                                                error400Descriptor,
                                                error500Descriptor
                                                ]];
@@ -449,6 +457,22 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     [[RKObjectManager sharedManager] postObject:nil path:kTransfersEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         if (success) {
             success(YES);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)getTransactionsForCard:(Card *)card success:(void (^)(NSArray<Transaction *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
+    NSDictionary *params = @{ @"card": card.cardId };
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:kTransactionsEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(mappingResult.array);
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         if (failure) {
