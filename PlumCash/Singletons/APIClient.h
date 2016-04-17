@@ -10,6 +10,7 @@
 
 @class User;
 @class Kid;
+@class Card;
 
 typedef NS_ENUM(NSInteger, StatusCode) {
     StatusCodeUnauthorized = 401
@@ -42,6 +43,8 @@ typedef NS_ENUM(NSInteger, StatusCode) {
 + (void)facebookLogin:(NSString*)token success:(void (^)(User *user))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)createKid:(Kid*)kid success:(void (^)(Kid *kid))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)getKidsSuccess:(void (^)(NSArray<Kid*> *kids))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
++ (void)createCard:(Card*)card success:(void (^)(Card *card))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
++ (void)getCardsSuccess:(void (^)(NSArray<Card *> *cards))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 
 
 @end

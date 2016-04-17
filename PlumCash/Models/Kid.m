@@ -10,9 +10,17 @@
 
 @implementation Kid
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _cards = [NSMutableArray array];
+    }
+    return self;
+}
+
 + (NSDictionary*)fieldMappings {
     NSDictionary *fields = @{
-                             @"id": @"userId",
+                             @"id": @"kidId",
                              @"email": @"email",
                              @"name": @"name",
                              @"first_name": @"firstName",

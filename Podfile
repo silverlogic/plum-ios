@@ -4,6 +4,7 @@ inhibit_all_warnings!
 
 link_with 'PlumCash'
 
+pod 'CardIO', '~> 5.3'
 pod 'Crashlytics', '~> 3.3'
 pod 'DBCamera', '~> 2.3'
 pod 'Fabric', '~> 1.5'

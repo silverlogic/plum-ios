@@ -11,6 +11,7 @@
 
 @interface Kid : User
 
+@property (nonatomic, strong) NSNumber *kidId;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *profileImage;
 @property (nonatomic, strong) NSURL *profileImageUrl;
@@ -18,6 +19,7 @@
 @property CGFloat pointsGoal;
 @property CGFloat allowance;
 @property CGFloat spent;
+@property (nonatomic, strong) NSMutableArray *cards;
 
 + (NSArray*)mockKids;
 + (Kid*)mockKid;

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E926A60908AB2D2774FBC9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22176AFD5F819BA518B0196C /* libPods.a */; };
 		45C9A10AEC7768FF7094217A /* libPods-PlumCashTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF54916DBC74B350262B68D /* libPods-PlumCashTests.a */; };
+		6307BB081CC354180007565C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6307BB071CC354180007565C /* Card.m */; };
 		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
 		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
 		639AB1701CC2990700C02199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639AB16E1CC2990700C02199 /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 /* Begin PBXFileReference section */
 		0E8DD29E98E246B50054B090 /* Pods-PlumCashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumCashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumCashTests/Pods-PlumCashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		22176AFD5F819BA518B0196C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6307BB061CC354180007565C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
+		6307BB071CC354180007565C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639AB1631CC2990700C02199 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		639AB1651CC2990700C02199 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				639AB1AC1CC2C1AD00C02199 /* ExtendedError.m */,
 				6BD5C4131CC2CE1A004F7E13 /* Kid.h */,
 				6BD5C4141CC2CE1A004F7E13 /* Kid.m */,
+				6307BB061CC354180007565C /* Card.h */,
+				6307BB071CC354180007565C /* Card.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				6BD5C4181CC31CA8004F7E13 /* AddCardViewController.m in Sources */,
 				6BD5C4021CC2BDED004F7E13 /* KidDetailViewController.m in Sources */,
 				639AB1A61CC2AF2C00C02199 /* NSObject+ProgressHUD.m in Sources */,
+				6307BB081CC354180007565C /* Card.m in Sources */,
 				639AB1AA1CC2BA0000C02199 /* APIClient.m in Sources */,
 				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
 				639AB19F1CC2AA2700C02199 /* UIViewController+Alert.m in Sources */,

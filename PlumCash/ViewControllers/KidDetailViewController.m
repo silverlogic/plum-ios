@@ -8,8 +8,11 @@
 
 #import "KidDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "CardIO.h"
+#import "APIClient.h"
+#import "Card.h"
 
-@interface KidDetailViewController ()
+@interface KidDetailViewController () <CardIOPaymentViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *spentLabel;
@@ -46,6 +49,8 @@
 
 - (void)setKid:(Kid *)kid {
 	_kid = kid;
+    
+    // @TODO: load cards
     [self updateUI];
 }
 
@@ -57,6 +62,42 @@
     self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
     self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent), ceil(self.kid.allowance)];
 }
+
+- (IBAction)addCardPressed:(id)sender {
+    CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
+    scanViewController.hideCardIOLogo = YES;
+    scanViewController.collectCVV = NO;
+    scanViewController.collectCardholderName = YES;
+    [self presentViewController:scanViewController animated:YES completion:nil];
+}
+
+#pragma mark - card.io Delegate
+- (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    NSLog(@"User canceled payment info");
+    // Handle user cancellation here...
+    [scanViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    // Use the card info...
+    Card *card = [Card new];
+    card.ownerType = @"kid";
+    card.ownerId = self.kid.kidId;
+    card.nameOnCard = info.cardholderName;
+    card.number = info.cardNumber;
+    card.expirationDate = [NSString stringWithFormat:@"%lu-%02lu-01", (unsigned long)info.expiryYear, (unsigned long)info.expiryMonth];
+    [self.kid.cards addObject:card];
+    self.currentCardDigits.text = info.redactedCardNumber;
+    
+    [APIClient createCard:card success:^(Card *card) {
+        //
+        [scanViewController dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(NSError *error, NSHTTPURLResponse *response) {
+        // oh no!
+        [scanViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
+
 
 /*
 #pragma mark - Navigation

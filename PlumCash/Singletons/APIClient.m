@@ -14,6 +14,7 @@
 #import "ExtendedError.h"
 #import "User.h"
 #import "Kid.h"
+#import "Card.h"
 
 //////////////////////////////////
 // Shared Instance
@@ -40,6 +41,7 @@ static NSString *const kUserEndpoint = @"users/:userId";
 static NSString *const kMeEndpoint = @"users/me";
 static NSString *const kKidsEndpoint = @"kids";
 static NSString *const kKidEndpoint = @"kid/:kidId";
+static NSString *const kCardsEndpoint = @"cards";
 
 typedef NS_ENUM(NSUInteger, PageSize) {
     PageSizeDefault  = 20,
@@ -114,6 +116,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKObjectMapping *kidResponseMapping = [RKObjectMapping mappingForClass:[Kid class]];
     [kidResponseMapping addAttributeMappingsFromDictionary:[Kid fieldMappings]];
     
+    /* CARD */
+    RKObjectMapping *cardResponseMapping = [RKObjectMapping mappingForClass:[Card class]];
+    [cardResponseMapping addAttributeMappingsFromDictionary:[Card fieldMappings]];
+    
     /* ********************************************* */
     /* ********* RESPONSE DESCRIPTORS ************** */
     /* SIGNUP */
@@ -132,6 +138,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKResponseDescriptor *kidsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodGET pathPattern:kKidsEndpoint keyPath:kResults statusCodes:successStatusCodes];
     RKResponseDescriptor *createKidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodPOST pathPattern:kKidsEndpoint keyPath:nil statusCodes:successStatusCodes];
     RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
+    /* CARD */
+    RKResponseDescriptor *cardsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodGET pathPattern:kCardsEndpoint keyPath:kResults statusCodes:successStatusCodes];
+    RKResponseDescriptor *createCardResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:cardResponseMapping method:RKRequestMethodPOST pathPattern:kCardsEndpoint keyPath:nil statusCodes:successStatusCodes];
+//    RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
     
     /* ********************************************* */
     /* ********** REQUEST DESCRIPTORS ************** */
@@ -140,6 +150,12 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     // prevents null from being sent when not set
     kidRequestMapping.assignsDefaultValueForMissingAttributes = NO;
     RKRequestDescriptor *kidRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:kidRequestMapping objectClass:[Kid class] rootKeyPath:nil method:RKRequestMethodAny];
+    
+    /* CARD */
+    RKObjectMapping *cardRequestMapping = [cardResponseMapping inverseMapping];
+    // prevents null from being sent when not set
+    cardRequestMapping.assignsDefaultValueForMissingAttributes = NO;
+    RKRequestDescriptor *cardRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:cardRequestMapping objectClass:[Card class] rootKeyPath:nil method:RKRequestMethodAny];
     
     /* USER */
 //    RKObjectMapping *userRequestMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
@@ -155,6 +171,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     // Add our descriptors to the manager
     [manager addRequestDescriptorsFromArray:@[
                                               kidRequestDescriptor,
+                                              cardRequestDescriptor,
 //                                              userRequestDescriptor
                                               ]];
     [manager addResponseDescriptorsFromArray:@[
@@ -168,6 +185,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                createKidResponseDescriptor,
                                                kidsResponseDescriptor,
                                                kidResponseDescriptor,
+                                               cardsResponseDescriptor,
+                                               createCardResponseDescriptor,
                                                error400Descriptor,
                                                error500Descriptor
                                                ]];
@@ -336,7 +355,6 @@ typedef NS_ENUM(NSUInteger, PageSize) {
         UIGraphicsEndImageContext();
         params[@"avatar"] = [UIImageJPEGRepresentation(newImage, 0.5) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     }
-//    params[@"name"] = kid.name;
     
     [[RKObjectManager sharedManager] postObject:kid path:kKidsEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         if (success) {
@@ -353,6 +371,36 @@ typedef NS_ENUM(NSUInteger, PageSize) {
 
 + (void)getKidsSuccess:(void (^)(NSArray<Kid *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
     [[RKObjectManager sharedManager] getObject:[User currentUser] path:kKidsEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(mappingResult.array);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)createCard:(Card*)card success:(void (^)(Card *card))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
+    NSMutableDictionary *params = nil;
+    
+    [[RKObjectManager sharedManager] postObject:card path:kCardsEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(card);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)getCardsSuccess:(void (^)(NSArray<Card *> *cards))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
+    [[RKObjectManager sharedManager] getObjectsAtPath:kCardsEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         if (success) {
             success(mappingResult.array);
         }
