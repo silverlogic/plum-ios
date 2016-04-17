@@ -47,25 +47,28 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="myU-IQ-zNT">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-Dv-Gxb" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="192" y="629" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.2274509804" green="0.31764705879999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVj-qF-teu" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="82" y="619" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZHF-xB-UKk"/>
+                                    <constraint firstAttribute="width" secondItem="mVj-qF-teu" secondAttribute="height" multiplier="5:1" id="vEA-qf-jeu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mVj-qF-teu" firstAttribute="centerY" secondItem="hxn-v6-DJ1" secondAttribute="centerY" multiplier="7:4" id="0UL-4X-Qa5"/>
                             <constraint firstItem="myU-IQ-zNT" firstAttribute="top" secondItem="mqc-hj-BkV" secondAttribute="bottom" id="Dv0-oW-JFN"/>
                             <constraint firstAttribute="trailing" secondItem="myU-IQ-zNT" secondAttribute="trailing" id="QLJ-Rv-7Np"/>
-                            <constraint firstItem="oi1-Dv-Gxb" firstAttribute="centerX" secondItem="hxn-v6-DJ1" secondAttribute="centerX" id="a81-pG-171"/>
+                            <constraint firstItem="mVj-qF-teu" firstAttribute="centerX" secondItem="hxn-v6-DJ1" secondAttribute="centerX" id="RPO-9x-DVV"/>
                             <constraint firstItem="TF5-ht-Xbn" firstAttribute="top" secondItem="myU-IQ-zNT" secondAttribute="bottom" id="arE-Gu-zbd"/>
                             <constraint firstItem="myU-IQ-zNT" firstAttribute="leading" secondItem="hxn-v6-DJ1" secondAttribute="leading" id="eVf-hE-Ffb"/>
-                            <constraint firstItem="oi1-Dv-Gxb" firstAttribute="centerY" secondItem="hxn-v6-DJ1" secondAttribute="centerY" multiplier="7:4" id="tGQ-En-0yC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IEc-FA-9bK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="facebookButton" destination="oi1-Dv-Gxb" id="Gwm-gN-EYK"/>
+                        <outlet property="facebookButton" destination="mVj-qF-teu" id="sWc-WC-PDU"/>
                         <segue destination="bWT-YM-uyr" kind="show" identifier="addCardSegue" id="wJn-M8-64c"/>
                     </connections>
                 </viewController>
@@ -469,7 +472,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="5AQ-wg-of3" secondAttribute="bottom" id="TLV-3w-y0q"/>
                                                     <constraint firstItem="5AQ-wg-of3" firstAttribute="width" secondItem="Ldw-df-tHf" secondAttribute="width" multiplier="1:2" id="fBA-qm-pIt"/>
@@ -501,7 +504,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="5Hz-lX-P1P" firstAttribute="top" secondItem="oRB-72-yee" secondAttribute="top" id="4Co-3G-6Gf"/>
                                                     <constraint firstAttribute="bottom" secondItem="5Hz-lX-P1P" secondAttribute="bottom" id="4Ft-xN-g7D"/>
@@ -631,7 +634,7 @@
                                             <rect key="frame" x="15" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -675,7 +678,7 @@
                                             <rect key="frame" x="15" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iuG-OF-bml">
@@ -736,7 +739,7 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7qO-Ft-bJL">
                                         <rect key="frame" x="260" y="0.0" width="138" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -779,7 +782,7 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yj7-e9-VYN" userLabel="Kid Name">
                                         <rect key="frame" x="260" y="0.0" width="138" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
