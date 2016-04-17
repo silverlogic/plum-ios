@@ -387,13 +387,13 @@
                                                 </constraints>
                                                 <color key="progressTintColor" red="0.89411764709999997" green="0.47133359899999999" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                             </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-1Z-gAz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points Label" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-1Z-gAz">
                                                 <rect key="frame" x="4" y="18" width="133" height="15"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allowance Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJU-7m-sVR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allowance Label" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJU-7m-sVR">
                                                 <rect key="frame" x="261" y="18" width="133" height="15"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
