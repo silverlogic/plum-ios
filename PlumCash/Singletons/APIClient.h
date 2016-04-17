@@ -50,6 +50,7 @@ typedef NS_ENUM(NSInteger, StatusCode) {
 + (void)getCardsSuccess:(void (^)(NSArray<Card *> *cards))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)transferAmount:(NSNumber*)amount fromCard:(Card*)sourceCard toCard:(Card*)destinationCard success:(void (^)(BOOL successfully))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 + (void)getTransactionsForCard:(Card*)card success:(void (^)(NSArray<Transaction *> *transactions))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
-+ (void)getRulesSuccess:(void (^)(NSArray<Rule *> *rules))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
++ (void)getRulesForCard:(Card*)card success:(void (^)(NSArray<Rule *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure;
++ (void)createRule:(Rule*)rule success:(void (^)(Rule *rule))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure;
 
 @end

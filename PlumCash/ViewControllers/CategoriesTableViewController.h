@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Card;
+
 @interface CategoriesTableViewController : UITableViewController
+
+@property (nonatomic, strong) Card *card;
 
 @end

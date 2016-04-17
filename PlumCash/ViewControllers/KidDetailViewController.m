@@ -15,6 +15,7 @@
 #import "UIViewController+Alert.h"
 #import "TransactionsViewController.h"
 #import "TransactionTableViewCell.h"
+#import "CategoriesTableViewController.h"
 
 @interface KidDetailViewController () <CardIOPaymentViewControllerDelegate>
 
@@ -37,6 +38,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *editCategoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *viewTransactionsButton;
 
+
+- (IBAction)backgroundTapped:(id)sender;
 
 @end
 
@@ -111,6 +114,9 @@
     
     [APIClient transferAmount:amount fromCard:[User currentUser].cards[0] toCard:self.kid.cards[0] success:^(BOOL successfully) {
         [self showHudWithTitle:@"Transfer successful!"];
+        self.kid.allowance = [NSNumber numberWithFloat:(self.kid.allowance.floatValue + amount.floatValue)];
+        self.kid.cards[0].allowance = [NSNumber numberWithFloat:(self.kid.cards[0].allowance.floatValue + amount.floatValue)];
+        [self updateUI];
      } failure:nil];
 }
 
@@ -149,7 +155,14 @@
     if ([segue.destinationViewController isKindOfClass:[TransactionsViewController class]]) {
         TransactionsViewController *controller = segue.destinationViewController;
         controller.card = self.kid.cards[0];
+    } else if ([segue.destinationViewController isKindOfClass:[CategoriesTableViewController class]]) {
+        CategoriesTableViewController *controller = segue.destinationViewController;
+        controller.card = self.kid.cards[0];
     }
+}
+
+- (IBAction)backgroundTapped:(id)sender {
+    [self.allowanceAmount resignFirstResponder];
 }
 
 @end

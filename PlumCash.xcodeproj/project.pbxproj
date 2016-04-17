@@ -14,6 +14,7 @@
 		630015811CC38C9A00258052 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015801CC38C9A00258052 /* Transaction.m */; };
 		630015851CC38FF000258052 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015841CC38FF000258052 /* TransactionTableViewCell.m */; };
 		630015881CC3A14C00258052 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630015871CC3A14C00258052 /* CategoriesTableViewController.m */; };
+		6300158B1CC3A5E500258052 /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300158A1CC3A5E500258052 /* Rule.m */; };
 		6307BB081CC354180007565C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6307BB071CC354180007565C /* Card.m */; };
 		639AB1641CC2990700C02199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1631CC2990700C02199 /* main.m */; };
 		639AB1671CC2990700C02199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AB1661CC2990700C02199 /* AppDelegate.m */; };
@@ -67,6 +68,8 @@
 		630015841CC38FF000258052 /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionTableViewCell.m; path = Views/TransactionTableViewCell.m; sourceTree = "<group>"; };
 		630015861CC3A14C00258052 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ViewControllers/CategoriesTableViewController.h; sourceTree = "<group>"; };
 		630015871CC3A14C00258052 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ViewControllers/CategoriesTableViewController.m; sourceTree = "<group>"; };
+		630015891CC3A5E500258052 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rule.h; path = Models/Rule.h; sourceTree = "<group>"; };
+		6300158A1CC3A5E500258052 /* Rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rule.m; path = Models/Rule.m; sourceTree = "<group>"; };
 		6307BB061CC354180007565C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Models/Card.h; sourceTree = "<group>"; };
 		6307BB071CC354180007565C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Models/Card.m; sourceTree = "<group>"; };
 		639AB15F1CC2990700C02199 /* PlumCash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumCash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +270,8 @@
 				6307BB071CC354180007565C /* Card.m */,
 				6300157F1CC38C9A00258052 /* Transaction.h */,
 				630015801CC38C9A00258052 /* Transaction.m */,
+				630015891CC3A5E500258052 /* Rule.h */,
+				6300158A1CC3A5E500258052 /* Rule.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -528,6 +533,7 @@
 				639AB1671CC2990700C02199 /* AppDelegate.m in Sources */,
 				639AB19F1CC2AA2700C02199 /* UIViewController+Alert.m in Sources */,
 				639AB1641CC2990700C02199 /* main.m in Sources */,
+				6300158B1CC3A5E500258052 /* Rule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

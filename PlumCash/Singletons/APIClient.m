@@ -16,6 +16,7 @@
 #import "Kid.h"
 #import "Card.h"
 #import "Transaction.h"
+#import "Rule.h"
 
 //////////////////////////////////
 // Shared Instance
@@ -47,6 +48,7 @@ static NSString *const kKidCardsEndpoint = @"kids/:kidId/cards";
 static NSString *const kCardsEndpoint = @"cards";
 static NSString *const kTransfersEndpoint = @"transfers";
 static NSString *const kTransactionsEndpoint = @"transactions";
+static NSString *const kRulesEndpoint = @"rules";
 
 typedef NS_ENUM(NSUInteger, PageSize) {
     PageSizeDefault  = 20,
@@ -129,6 +131,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKObjectMapping *transactionResponseMapping = [RKObjectMapping mappingForClass:[Transaction class]];
     [transactionResponseMapping addAttributeMappingsFromDictionary:[Transaction fieldMappings]];
     
+    /* RULE */
+    RKObjectMapping *ruleResponseMapping = [RKObjectMapping mappingForClass:[Rule class]];
+    [ruleResponseMapping addAttributeMappingsFromDictionary:[Rule fieldMappings]];
+    
     /* ********************************************* */
     /* ********* RESPONSE DESCRIPTORS ************** */
     /* SIGNUP */
@@ -156,6 +162,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKResponseDescriptor *transferResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:emptyResponseMapping method:RKRequestMethodPOST pathPattern:kTransfersEndpoint keyPath:nil statusCodes:successStatusCodes];
     /* TRANSACTION */
     RKResponseDescriptor *transactionsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:transactionResponseMapping method:RKRequestMethodGET pathPattern:kTransactionsEndpoint keyPath:kResults statusCodes:successStatusCodes];
+    /* RULE */
+    RKResponseDescriptor *rulesResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:ruleResponseMapping method:RKRequestMethodGET pathPattern:kRulesEndpoint keyPath:kResults statusCodes:successStatusCodes];
+    RKResponseDescriptor *createRuleResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:ruleResponseMapping method:RKRequestMethodPOST pathPattern:kRulesEndpoint keyPath:nil statusCodes:successStatusCodes];
+    
     /* ********************************************* */
     /* ********** REQUEST DESCRIPTORS ************** */
     /* KID */
@@ -169,6 +179,12 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     // prevents null from being sent when not set
     cardRequestMapping.assignsDefaultValueForMissingAttributes = NO;
     RKRequestDescriptor *cardRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:cardRequestMapping objectClass:[Card class] rootKeyPath:nil method:RKRequestMethodAny];
+    
+    /* RULE */
+    RKObjectMapping *ruleRequestMapping = [ruleResponseMapping inverseMapping];
+    // prevents null from being sent when not set
+    ruleRequestMapping.assignsDefaultValueForMissingAttributes = NO;
+    RKRequestDescriptor *ruleRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:ruleRequestMapping objectClass:[Rule class] rootKeyPath:nil method:RKRequestMethodAny];
     
     /* USER */
 //    RKObjectMapping *userRequestMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
@@ -185,6 +201,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     [manager addRequestDescriptorsFromArray:@[
                                               kidRequestDescriptor,
                                               cardRequestDescriptor,
+                                              ruleRequestDescriptor,
 //                                              userRequestDescriptor
                                               ]];
     [manager addResponseDescriptorsFromArray:@[
@@ -201,8 +218,10 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                myCardsResponseDescriptor,
                                                kidCardsResponseDescriptor,
                                                createCardResponseDescriptor,
+                                               createRuleResponseDescriptor,
                                                transferResponseDescriptor,
                                                transactionsResponseDescriptor,
+                                               rulesResponseDescriptor,
                                                error400Descriptor,
                                                error500Descriptor
                                                ]];
@@ -483,8 +502,34 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     }];
 }
 
-+ (void)getRulesSuccess:(void (^)(NSArray<Rule *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
-    // TODO: implement XD
++ (void)getRulesForCard:(Card*)card success:(void (^)(NSArray<Rule *> *))success failure:(void (^)(NSError *, NSHTTPURLResponse *))failure {
+    NSDictionary *params = @{ @"card": card.cardId };
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:kRulesEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(mappingResult.array);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)createRule:(Rule*)rule success:(void (^)(Rule *rule))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
+    [[RKObjectManager sharedManager] postObject:rule path:kRulesEndpoint parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(rule);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
 }
 
 
