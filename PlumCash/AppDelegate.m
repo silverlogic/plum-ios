@@ -24,7 +24,10 @@
     [APIClient sharedClient];
 //    [APIClient setToken:nil];
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    
+	[[UITabBar appearance] setTintColor:[UIColor colorWithRed:228/255.0 green:26/255.0 blue:75/255.0 alpha:1.0]];
+	[self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed: @"background"]]];
+
+	
     return YES;
 }
 

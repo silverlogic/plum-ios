@@ -24,7 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+
     self.facebookButton.delegate = self;
     self.facebookButton.readPermissions = @[@"public_profile", @"email"];
 }

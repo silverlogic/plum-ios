@@ -12,7 +12,7 @@
 static NSString *const _reuseIdentifier = @"KidTableViewCell";
 
 @interface KidTableViewCell ()
-
+@property (strong, nonatomic) IBOutlet UIImageView *outerCircle;
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UIImageView *profileImage;
 @property (strong, nonatomic) IBOutlet UIProgressView *pointsBar;
@@ -26,6 +26,10 @@ static NSString *const _reuseIdentifier = @"KidTableViewCell";
 
 - (void)awakeFromNib {
     // Initialization code
+	self.profileImage.layer.cornerRadius = _profileImage.bounds.size.width/2;
+	self.profileImage.layer.masksToBounds = YES;
+	self.outerCircle.layer.cornerRadius = _outerCircle.bounds.size.width/2;
+	self.outerCircle.layer.masksToBounds = YES;
 }
 
 + (NSString*)reuseIdentifier {
