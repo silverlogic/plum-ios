@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Kid.h"
 
 @interface KidDetailViewController : UIViewController
+
+@property (strong, nonatomic) Kid *kid;
+
 
 @end

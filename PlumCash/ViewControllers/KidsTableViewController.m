@@ -34,10 +34,10 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 	self.list = [NSMutableArray array];
 	[self.list addObjectsFromArray:[Kid mockKids]];
     
-    if (![APIClient isAuthenticated]) {
-        [self logout:NO];
-        NSLog(@"missing authentication --> logout");
-    }
+//    if (![APIClient isAuthenticated]) {
+//        [self logout:NO];
+//        NSLog(@"missing authentication --> logout");
+//    }
 }
 
 - (void)logout:(BOOL)animated {
