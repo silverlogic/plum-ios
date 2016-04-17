@@ -244,7 +244,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Kids" id="NRn-Bw-aFj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rv8-2C-C2B">
+                        <barButtonItem key="rightBarButtonItem" image="add" id="Rv8-2C-C2B">
+                            <color key="tintColor" red="0.89411764705882346" green="0.10196078431372549" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="fhL-hg-AZl" kind="show" id="msh-Xk-G7Y"/>
                             </connections>
@@ -632,6 +633,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="32" height="32"/>
         <image name="visa" width="598" height="598"/>
     </resources>
     <inferredMetricsTieBreakers>
