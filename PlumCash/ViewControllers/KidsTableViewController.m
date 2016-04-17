@@ -64,7 +64,7 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 
 - (void)logout:(BOOL)animated {
     [APIClient cancelAllRequests];
-    [APIClient setToken:nil];
+//    [APIClient setToken:nil];
     [User setCurrentUser:nil];
     FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
     [loginManager logOut];
