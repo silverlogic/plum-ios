@@ -17,16 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="eyr-lZ-DAF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-qR-SAX">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="eyr-lZ-DAF" secondAttribute="bottom" id="9uL-MG-7FZ"/>
-                            <constraint firstAttribute="trailing" secondItem="eyr-lZ-DAF" secondAttribute="trailing" id="Dr5-Ga-msD"/>
-                            <constraint firstItem="eyr-lZ-DAF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="Q80-KQ-jcF"/>
-                            <constraint firstItem="eyr-lZ-DAF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="mc9-lm-bE5"/>
+                            <constraint firstItem="CL5-qR-SAX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="JeY-A1-kmk"/>
+                            <constraint firstAttribute="trailing" secondItem="CL5-qR-SAX" secondAttribute="trailing" id="eDd-DW-7Xp"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="CL5-qR-SAX" secondAttribute="bottom" id="scE-nC-M2U"/>
+                            <constraint firstItem="CL5-qR-SAX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="wHt-6x-AAn"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="750" height="1334"/>
+        <image name="background" width="1080" height="1920"/>
     </resources>
 </document>
