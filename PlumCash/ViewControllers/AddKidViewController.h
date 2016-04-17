@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Kid.h"
 
 @interface AddKidViewController : UIViewController
 

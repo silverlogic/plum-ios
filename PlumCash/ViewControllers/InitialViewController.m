@@ -36,6 +36,9 @@
     if (result.isCancelled) {
         [self showMessage:NSLocalizedString(@"Login.FacebookCanceled", @"user has to compete FB auth flow") withType:MessageTypeError];
         return;
+    } else if (!result.token) {
+        [self showMessage:@"Could not retrieve Facebook authentication." withType:MessageTypeError];
+        return;
     }
     
     [APIClient facebookLogin:result.token.tokenString success:^(User *user) {

@@ -19,7 +19,7 @@
                              @"last_name": @"lastName",
                              @"password": @"password",
                              @"token": @"token",
-                             @"avatar.url": @"imageUrl"
+                             @"avatar.full_size": @"profileImageUrl"
                              };
     NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
     return fieldMappings;

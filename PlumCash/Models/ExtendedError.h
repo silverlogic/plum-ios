@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSArray *firstName;
 @property (nonatomic, strong) NSArray *lastName;
+@property (nonatomic, strong) NSArray *name;
 @property (nonatomic, strong) NSArray *email;
 @property (nonatomic, strong) NSArray *token;
 @property (nonatomic, strong) NSArray *password;

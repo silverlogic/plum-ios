@@ -7,6 +7,7 @@
 //
 
 #import "KidDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface KidDetailViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *image;
@@ -51,7 +52,7 @@
 - (void)updateUI {
     self.title = self.kid.name; // doesn't work
     self.name.text = self.kid.name;
-    //	self.profileImage =
+    [self.image setImageWithURL:self.kid.profileImageUrl placeholderImage:nil];
     self.pointsBar.progress = self.kid.pointsGoal > 0 ? self.kid.points / self.kid.pointsGoal : 0;
     self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
     self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent), ceil(self.kid.allowance)];

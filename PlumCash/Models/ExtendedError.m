@@ -17,6 +17,7 @@
                                               @"id": @"userId",
                                               @"first_name": @"firstName",
                                               @"last_name": @"lastName",
+                                              @"name": @"name",
                                               @"email": @"email",
                                               @"token": @"token",
                                               @"password": @"password",
@@ -38,6 +39,11 @@
     _lastName = lastName;
     
     [self appendErrors:lastName forKey:@"Lastname"];
+}
+- (void)setName:(NSArray *)name {
+    _name = name;
+    
+    [self appendErrors:name forKey:@"Name"];
 }
 - (void)setEmail:(NSArray *)email {
     _email = email;

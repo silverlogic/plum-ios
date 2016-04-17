@@ -129,7 +129,8 @@ typedef NS_ENUM(NSUInteger, PageSize) {
     RKResponseDescriptor *userResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userResponseMapping method:RKRequestMethodPATCH pathPattern:kUserEndpoint keyPath:nil statusCodes:successStatusCodes];
     RKResponseDescriptor *meResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userResponseMapping method:RKRequestMethodGET pathPattern:kMeEndpoint keyPath:nil statusCodes:successStatusCodes];
     /* KID */
-    RKResponseDescriptor *kidsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidsEndpoint keyPath:kResults statusCodes:successStatusCodes];
+    RKResponseDescriptor *kidsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodGET pathPattern:kKidsEndpoint keyPath:kResults statusCodes:successStatusCodes];
+    RKResponseDescriptor *createKidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodPOST pathPattern:kKidsEndpoint keyPath:nil statusCodes:successStatusCodes];
     RKResponseDescriptor *kidResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:kidResponseMapping method:RKRequestMethodAny pathPattern:kKidEndpoint keyPath:nil statusCodes:successStatusCodes];
     
     /* ********************************************* */
@@ -164,6 +165,7 @@ typedef NS_ENUM(NSUInteger, PageSize) {
                                                changePasswordResponseDescriptor,
                                                userResponseDescriptor,
                                                meResponseDescriptor,
+                                               createKidResponseDescriptor,
                                                kidsResponseDescriptor,
                                                kidResponseDescriptor,
                                                error400Descriptor,
@@ -314,6 +316,31 @@ typedef NS_ENUM(NSUInteger, PageSize) {
         [User currentUser].password = newPassword;
         if (success) {
             success(YES);
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error, operation.HTTPRequestOperation.response);
+        } else {
+            _defaultFailureBlock(operation, error);
+        }
+    }];
+}
+
++ (void)createKid:(Kid*)kid success:(void (^)(Kid *kid))success failure:(void (^)(NSError *error, NSHTTPURLResponse *response))failure {
+    NSMutableDictionary *params = @{}.mutableCopy;
+    if (kid.image) {
+        CGSize newSize = CGSizeMake(200, 200);
+        UIGraphicsBeginImageContext(newSize);
+        [kid.image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        params[@"avatar"] = [UIImageJPEGRepresentation(newImage, 0.5) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    }
+//    params[@"name"] = kid.name;
+    
+    [[RKObjectManager sharedManager] postObject:kid path:kKidsEndpoint parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        if (success) {
+            success(kid);
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         if (failure) {
