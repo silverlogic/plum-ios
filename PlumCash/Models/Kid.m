@@ -27,7 +27,9 @@
                              @"last_name": @"lastName",
                              @"password": @"password",
                              @"token": @"token",
-                             @"avatar.full_size": @"profileImageUrl"
+                             @"avatar.full_size": @"profileImageUrl",
+                             @"total_amount_spent": @"allowance",
+                             @"total_amount_on_cards": @"spent"
                              };
     NSMutableDictionary *fieldMappings = [NSMutableDictionary dictionaryWithDictionary:fields];
     return fieldMappings;
@@ -35,12 +37,12 @@
 
 
 #pragma mark - Getters
-- (NSNumber *)allowance {
-    return [self.cards valueForKeyPath:@"@sum.allowance"];
-}
-- (NSNumber *)spent {
-    return [self.cards valueForKeyPath:@"@sum.spent"];
-}
+//- (NSNumber *)allowance {
+//    return [self.cards valueForKeyPath:@"@sum.allowance"];
+//}
+//- (NSNumber *)spent {
+//    return [self.cards valueForKeyPath:@"@sum.spent"];
+//}
 
 
 #pragma mark - Mock
