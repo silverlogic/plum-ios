@@ -9,8 +9,9 @@
 #import "AddKidViewController.h"
 
 @interface AddKidViewController ()
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *dismissWithCancel;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveKid;
+
+- (IBAction)cancel:(id)sender;
+- (IBAction)save:(id)sender;
 
 @end
 
@@ -36,4 +37,15 @@
 }
 */
 
+- (IBAction)cancel:(id)sender {
+	[self dismissViewControllerAnimated:YES completion:^{
+		//yay
+	}];
+}
+
+- (IBAction)save:(id)sender {
+	[self dismissViewControllerAnimated:YES completion:^{
+		//yay
+	}];
+}
 @end

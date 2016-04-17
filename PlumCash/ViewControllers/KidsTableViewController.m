@@ -34,10 +34,10 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 	self.list = [NSMutableArray array];
 	[self.list addObjectsFromArray:[Kid mockKids]];
     
-    if (![APIClient isAuthenticated]) {
-        [self logout:NO];
-        NSLog(@"missing authentication --> logout");
-    }
+//    if (![APIClient isAuthenticated]) {
+//        [self logout:NO];
+//        NSLog(@"missing authentication --> logout");
+//    }
 }
 
 - (void)logout:(BOOL)animated {
@@ -58,12 +58,10 @@ static NSString *const kLogoutSegueNoAnimation = @"LogoutSegueNoAnimation";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return self.list.count;
 }
 

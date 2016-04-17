@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -38,8 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-Dv-Gxb" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="75" y="285" width="451" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-Dv-Gxb" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.31764705879999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                             </button>
                         </subviews>
@@ -162,7 +162,7 @@
                                     <outlet property="pointsBarLabel" destination="Mm6-j5-sdd" id="GFs-dx-KzO"/>
                                     <outlet property="profileImage" destination="ZSu-tN-bEa" id="Fbl-dk-v84"/>
                                     <outlet property="spentLabel" destination="VkW-cY-b1f" id="6Df-Fr-c1g"/>
-                                    <segue destination="m5o-iO-oBS" kind="showDetail" id="xhx-hO-Sds"/>
+                                    <segue destination="m5o-iO-oBS" kind="show" id="1IH-2A-GTV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -232,12 +232,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-1Z-gAz">
-                                        <rect key="frame" x="168" y="74" width="94" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3nA-BV-wDf" userLabel="Allowance Progress View">
                                         <rect key="frame" x="168" y="112" width="172" height="2"/>
                                     </progressView>
@@ -264,9 +258,9 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrt-5d-tUj">
-                                        <rect key="frame" x="8" y="241" width="116" height="30"/>
+                                        <rect key="frame" x="8" y="241" width="109" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Savings Match %">
+                                        <state key="normal" title="Reward">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -276,7 +270,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpv-ef-q8K">
-                                        <rect key="frame" x="11" y="292" width="129" height="30"/>
+                                        <rect key="frame" x="8" y="292" width="129" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Monthly Allowance">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -293,22 +287,28 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-1Z-gAz">
+                                        <rect key="frame" x="168" y="74" width="94" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oON-y8-hEv" userLabel="Categories Table View">
-                                <rect key="frame" x="0.0" y="476" width="600" height="80"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oON-y8-hEv" userLabel="Store Categories Table View">
+                                <rect key="frame" x="0.0" y="476" width="414" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DCb-D7-N95" userLabel="Category Table View Cell">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" id="DCb-D7-N95" userLabel="Category Table View Cell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DCb-D7-N95" id="btn-RC-jVf">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jg-5v-5ih">
-                                                    <rect key="frame" x="25" y="11" width="83" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Store Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jg-5v-5ih">
+                                                    <rect key="frame" x="8" y="11" width="116" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -318,22 +318,37 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8A7-rC-0Tz">
-                                <rect key="frame" x="-186" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Kid Detail" id="2Fh-oj-9VD"/>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-HI-00u">
+                                <rect key="frame" x="160" y="445" width="94" height="30"/>
+                                <state key="normal" title="Edit Category"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="iLi-Od-7UZ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="allowanceAmount" destination="5AQ-wg-of3" id="APd-kj-x9N"/>
+                        <outlet property="allowanceButton" destination="Hpv-ef-q8K" id="6j9-hW-DYa"/>
+                        <outlet property="allowanceProgress" destination="3nA-BV-wDf" id="NIA-dk-Js0"/>
+                        <outlet property="currentCardDigits" destination="NKW-c4-uLX" id="Gfo-sd-jAj"/>
+                        <outlet property="editCard" destination="5Hz-lX-P1P" id="naB-DP-5gs"/>
+                        <outlet property="editCategoryButton" destination="cJf-HI-00u" id="YeE-58-PuA"/>
+                        <outlet property="image" destination="qCs-dg-tKI" id="v5E-7z-u1D"/>
+                        <outlet property="name" destination="HWs-U2-xDG" id="uhm-h2-cNV"/>
+                        <outlet property="pointsBar" destination="Hn0-60-Ll7" id="bl9-I4-X5z"/>
+                        <outlet property="pointsBarLabel" destination="GIZ-1Z-gAz" id="yqv-LZ-ChG"/>
+                        <outlet property="rewardButton" destination="jrt-5d-tUj" id="tvp-CL-dwt"/>
+                        <outlet property="rewardContent" destination="NI7-3d-2nm" id="Qvm-vt-9Cx"/>
+                        <outlet property="spentBarProgress" destination="3nA-BV-wDf" id="vea-sj-CdY"/>
+                        <outlet property="spentLabel" destination="aJU-7m-sVR" id="cgK-ZF-frE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR4-ia-hae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1158" y="766"/>
+            <point key="canvasLocation" x="-1158" y="916"/>
         </scene>
         <!--Add Kid View Controller-->
         <scene sceneID="PxF-sa-uuT">
@@ -350,14 +365,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZnZ-FL-Uty">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mA9-I4-cdC"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CEL-sf-iD2"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mA9-I4-cdC">
+                            <connections>
+                                <action selector="cancel:" destination="6OF-5i-H9z" id="HPz-if-7mU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CEL-sf-iD2">
+                            <connections>
+                                <action selector="save:" destination="6OF-5i-H9z" id="rQ3-4d-RNA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="dismissWithCancel" destination="mA9-I4-cdC" id="iZh-c6-kMD"/>
-                        <outlet property="saveKid" destination="CEL-sf-iD2" id="gwi-lY-ddt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBF-dc-cOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -395,7 +414,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cHa-ZZ-72d" id="8vD-GT-h2P">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -460,28 +479,11 @@
             </objects>
             <point key="canvasLocation" x="-1286" y="-692"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="aDV-fD-Sza">
-            <objects>
-                <viewController id="QEZ-xI-d66" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ByG-c1-jtJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="dEa-7d-Pmc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0o9-yk-Jot">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmf-DO-mWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="visa" width="598" height="598"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jbm-x0-QVN"/>
+        <segue reference="ynT-9a-zIQ"/>
     </inferredMetricsTieBreakers>
 </document>
