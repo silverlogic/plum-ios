@@ -9,6 +9,54 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Chores Table View-->
+        <scene sceneID="Eua-sz-BX0">
+            <objects>
+                <tableViewController id="dUe-gI-HML" userLabel="Chores Table View" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hgU-fl-x5f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="viW-7M-d9L">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viW-7M-d9L" id="rKp-qD-reB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dUe-gI-HML" id="hWY-bJ-RN9"/>
+                            <outlet property="delegate" destination="dUe-gI-HML" id="Nil-bI-vD7"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Chores" image="chores" id="Eyr-xQ-x2i" userLabel="Chores"/>
+                    <navigationItem key="navigationItem" title="Chores" id="tMu-Rt-Haq"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ybh-xC-z6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2515" y="-255"/>
+        </scene>
+        <!--Chores Navigation Controller-->
+        <scene sceneID="J0k-rX-1GU">
+            <objects>
+                <navigationController id="v0X-gd-ipg" userLabel="Chores Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Y1n-sy-gtx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wjN-Am-nwi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dUe-gI-HML" kind="relationship" relationship="rootViewController" id="NAK-dL-odY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdc-O2-dzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3335" y="-255"/>
+        </scene>
         <!--Kids Navigation Controller-->
         <scene sceneID="9wF-yF-28B">
             <objects>
@@ -883,6 +931,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="dwl-9a-ECz" kind="relationship" relationship="viewControllers" id="dEd-AL-Gqp"/>
+                        <segue destination="v0X-gd-ipg" kind="relationship" relationship="viewControllers" id="4sf-vQ-QR2"/>
                         <segue destination="apg-wZ-ytp" kind="relationship" relationship="viewControllers" id="Rrx-Sn-evq"/>
                     </connections>
                 </tabBarController>
@@ -973,6 +1022,7 @@
         <image name="add" width="32" height="32"/>
         <image name="add_image" width="100" height="100"/>
         <image name="background" width="1080" height="1920"/>
+        <image name="chores" width="24" height="24"/>
         <image name="kid" width="36" height="36"/>
         <image name="settings" width="36" height="36"/>
         <image name="visa" width="598" height="598"/>
