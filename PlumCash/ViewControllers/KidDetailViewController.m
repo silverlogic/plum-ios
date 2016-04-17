@@ -71,7 +71,8 @@
     [self.image setImageWithURL:self.kid.profileImageUrl placeholderImage:nil];
     self.pointsBar.progress = self.kid.pointsGoal > 0 ? self.kid.points / self.kid.pointsGoal : 0;
     self.pointsBarLabel.text = [NSString stringWithFormat:@"%.0f / %.0f points", ceil(self.kid.points), ceil(self.kid.pointsGoal)];
-    self.spentLabel.text = [NSString stringWithFormat:@"%.0f spent of %.0f dollars", ceil(self.kid.spent.floatValue), ceil(self.kid.allowance.floatValue)];
+	self.spentBarProgress.progress = ceil(self.kid.spent.floatValue) / ceil(self.kid.allowance.floatValue);
+    self.spentLabel.text = [NSString stringWithFormat:@"%.0f / %.0f $", ceil(self.kid.spent.floatValue), ceil(self.kid.allowance.floatValue)];
     
     self.image.layer.cornerRadius = _image.bounds.size.width/2;
     self.image.layer.masksToBounds = YES;
